@@ -122,6 +122,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PagPrincipal.xaml.cs">
+      <DependentUpon>PagPrincipal.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Diego.xaml.cs">
       <DependentUpon>Diego.xaml</DependentUpon>
     </Compile>
@@ -159,6 +162,10 @@
     <Page Include="Andres.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PagPrincipal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Diego.xaml">
       <Generator>MSBuild:Compile</Generator>
