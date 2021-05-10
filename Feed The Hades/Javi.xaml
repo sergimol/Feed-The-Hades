@@ -8,7 +8,107 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Background="#FFAD9FCB">
+        <StackPanel x:Name="Panel"
+                    Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Padding="40,40,40,40" 
+                    Margin="0,80,0,0"
+                    Background="#33FFFFFF"
+                    >
 
+            <!-- TabIndex="0"                       Orden de tabulacion-->
+            <!-- Click ="playButton_click"          Ejecuta el metodo onClick-->
+            <!-- KeyDown="playButton_Keydown"       Ejecuta el metodo onKeydown-->
+            <!-- Background="Transparent"           Fondo trasparente-->
+            <!-- ToolTipService.ToolTip="texto"     Cuando se mantiene el raton encima sale ese texto-->
+
+            <!--Titulo-->
+            <StackPanel x:Name="Title"
+                    Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                     Background="#99630808"
+                     >
+                <TextBlock
+                FontSize="80"
+                Text="Feed the Hades"  Foreground="#FF360505" Margin="40,40,40,40">
+                </TextBlock>
+            </StackPanel>
+
+            <!--Boton 1-->
+            <Button x:Name="playButton"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="0, 40, 0, 40"
+                FontSize="60"
+                Content="Nueva partida"
+                ToolTipService.ToolTip="Click para crear nueva partida"
+                IsTabStop="True"
+                UseSystemFocusVisuals="True">
+
+                <Button.KeyboardAccelerators>
+                    <KeyboardAccelerator Modifiers="Control" Key="J"/>
+                </Button.KeyboardAccelerators>
+            </Button>
+            <!--Boton 2-->
+            <Button x:Name="configButton"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="0, 40, 0, 40"
+                FontSize="60"
+                Content="Nueva partida"
+                ToolTipService.ToolTip="Click para crear nueva partida"          
+                IsTabStop="True"
+                UseSystemFocusVisuals="True">
+            </Button>
+            <!--Boton 3-->
+            <Button x:Name="configButton2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="0, 40, 0, 40"
+                FontSize="60"
+                Content="Nueva partida"
+                ToolTipService.ToolTip="Click para crear nueva partida"          
+                IsTabStop="True"
+                UseSystemFocusVisuals="True">
+            </Button>
+        </StackPanel>
+        <StackPanel
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal" Background="Transparent"
+            Height="150"
+            >
+
+            <!--Config Button-->
+            <AppBarButton Icon="Setting" HorizontalAlignment="Center" VerticalAlignment="Bottom"  BorderBrush="#FF740B0B" BorderThickness="5" Height="120" Background="#66360505"/>
+            <!--Quit button-->
+            <AppBarButton Icon="Clear"  HorizontalAlignment="Center" VerticalAlignment="Bottom" BorderBrush="#FF740B0B" BorderThickness="5" Height="120" Background="#68360505"/>
+
+
+            <!--<Button x:Name="optionsButton"
+                VerticalAlignment="Center"
+                Margin="0, 40, 0, 40"
+                FontSize="60"
+                Click="nuevaPartida"
+                ToolTipService.ToolTip="Click para crear nueva partida"          
+                IsTabStop="True"
+                UseSystemFocusVisuals="True" Background="{x:Null}" Height="150" Width="150">
+                <Image Source="/Assets/StoreLogo.png"/>
+            </Button>
+
+            <Button x:Name="quitButton"
+                VerticalAlignment="Center"
+                Margin="0, 40, 0, 40"
+                FontSize="60"
+                ToolTipService.ToolTip="Click para crear nueva partida"          
+                IsTabStop="True"
+                UseSystemFocusVisuals="True" Background="{x:Null}" Height="150" Width="150"
+                    i>
+                <Image Source="/Assets/StoreLogo.png"/>
+            </Button>-->
+        </StackPanel>
     </Grid>
 </Page>
