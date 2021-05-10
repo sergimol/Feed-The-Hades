@@ -61,7 +61,8 @@
                 Content="Nueva partida"
                 ToolTipService.ToolTip="Click para crear nueva partida"          
                 IsTabStop="True"
-                UseSystemFocusVisuals="True">
+                UseSystemFocusVisuals="True"
+                >
             </Button>
             <!--Boton 3-->
             <Button x:Name="configButton2"
