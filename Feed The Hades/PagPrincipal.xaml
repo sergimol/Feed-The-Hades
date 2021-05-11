@@ -25,7 +25,7 @@
         <Grid.RowDefinitions>
 
             <RowDefinition Height="58"/>
-            <RowDefinition Height="620"/>
+            <RowDefinition Height="620*"/>
             <RowDefinition Height="1*" MinHeight="241"/>
             <RowDefinition Height="100"/>
 
@@ -48,17 +48,19 @@
             </GridView>
         </ScrollViewer>
         <!--BARRA DE MUERTES-->
-        <StackPanel Grid.Row="3" Grid.ColumnSpan="3" Background="Red" Orientation="Vertical">
-            <TextBlock Text="MUERTES TOTALES" FontSize="20" HorizontalAlignment="Center"/>
-            <TextBlock Text="3949/7000000" FontSize="20" HorizontalAlignment="Center"/>
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="3" Background="Red" Orientation="Vertical" Padding="0,20,0,0">
+            <TextBlock Text="MUERTES TOTALES" FontSize="20" HorizontalAlignment="Center" />
+            <TextBlock Text="3949/7000000" FontSize="20" HorizontalAlignment="Center" />
         </StackPanel>
         <!--AJUSTES DE CONFIG Y EXIT-->
         <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Vertical">
-            <AppBarButton Icon="Setting" HorizontalAlignment="Right" VerticalAlignment="Bottom"  BorderBrush="#FF740B0B" BorderThickness="5" Height="auto" Background="#66360505"/>
-            <AppBarButton Icon="Setting" HorizontalAlignment="Right" VerticalAlignment="Bottom"  BorderBrush="#FF740B0B" BorderThickness="5" Height="auto" Background="#66360505"/>
+
+            <AppBarButton Icon="Setting" HorizontalAlignment="Right" VerticalAlignment="Bottom"  BorderBrush="#FF740B0B" BorderThickness="5" Height="50" Background="#FF746666"/>
+            <AppBarButton Icon="Cancel" HorizontalAlignment="Right" VerticalAlignment="Bottom"  BorderBrush="#FF740B0B" BorderThickness="5" Height="50" Background="#FF871919"/>
+
         </StackPanel>
-        
-        
+
+
         <Rectangle Fill="Green
                    " Grid.RowSpan="3" Grid.Column="2"  />
 
