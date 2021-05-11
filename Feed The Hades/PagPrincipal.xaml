@@ -25,8 +25,8 @@
         <Grid.RowDefinitions>
 
             <RowDefinition Height="58"/>
-            <RowDefinition Height="620*"/>
-            <RowDefinition Height="1*" MinHeight="241"/>
+            <RowDefinition/>
+            <RowDefinition Height="241"/>
             <RowDefinition Height="100"/>
 
         </Grid.RowDefinitions>
@@ -35,16 +35,16 @@
         <!--DIOSES GRIEGOS-->
         <ScrollViewer Grid.Row="2" Grid.ColumnSpan="2">
             <GridView   Background="#FFDEB4CB"  >
-                <Image Source="/Assets/StoreLogo.png" Width="150" Height="150" Margin="20, 20,20,20"/>
-                <Image Source="/Assets/StoreLogo.png" Width="150" Height="150" Margin="20, 20,20,20"/>
-                <Image Source="/Assets/StoreLogo.png" Width="150" Height="150" Margin="20, 20,20,20"/>
-                <Image Source="/Assets/StoreLogo.png" Width="150" Height="150" Margin="20, 20,20,20"/>
-                <Image Source="/Assets/StoreLogo.png" Width="150" Height="150" Margin="20, 20,20,20"/>
-                <Image Source="/Assets/StoreLogo.png" Width="150" Height="150" Margin="20, 20,20,20"/>
-                <Image Source="/Assets/StoreLogo.png" Width="150" Height="150" Margin="20, 20,20,20"/>
-                <Image Source="/Assets/StoreLogo.png" Width="150" Height="150" Margin="20, 20,20,20"/>
-                <Image Source="/Assets/StoreLogo.png" Width="150" Height="150" Margin="20, 20,20,20"/>
-                <Image Source="/Assets/StoreLogo.png" Width="150" Height="150" Margin="20, 20,20,20"/>
+                <Image Source="/Assets/eltio.png" Width="150" Height="150" Margin="20, 20,20,20"/>
+                <Image Source="/Assets/eltio.png" Width="150" Height="150" Margin="20, 20,20,20"/>
+                <Image Source="/Assets/eltio.png" Width="150" Height="150" Margin="20, 20,20,20"/>
+                <Image Source="/Assets/eltio.png" Width="150" Height="150" Margin="20, 20,20,20"/>
+                <Image Source="/Assets/eltio.png" Width="150" Height="150" Margin="20, 20,20,20"/>
+                <Image Source="/Assets/eltio.png" Width="150" Height="150" Margin="20, 20,20,20"/>
+                <Image Source="/Assets/eltio.png" Width="150" Height="150" Margin="20, 20,20,20"/>
+                <Image Source="/Assets/eltio.png" Width="150" Height="150" Margin="20, 20,20,20"/>
+                <Image Source="/Assets/eltio.png" Width="150" Height="150" Margin="20, 20,20,20"/>
+                <Image Source="/Assets/eltio.png" Width="150" Height="150" Margin="20, 20,20,20"/>
             </GridView>
         </ScrollViewer>
         <!--BARRA DE MUERTES-->
@@ -67,6 +67,27 @@
         <TextBlock HorizontalAlignment="Center" Text="EL HADES" TextWrapping="Wrap" VerticalAlignment="Center" Height="51" Width="409" Grid.Row="0" Grid.Column="0" TextAlignment="Center" Foreground="White"  />
         <TextBlock HorizontalAlignment="Center" Text="TIENDA" TextWrapping="Wrap" VerticalAlignment="Center" Height="51" Width="409" Grid.Row="0" Grid.Column="1" TextAlignment="Center" Foreground="White"/>
         <TextBlock HorizontalAlignment="Center" Text="LA TIERRA" TextWrapping="Wrap" VerticalAlignment="Center" Height="51" Width="409" Grid.Row="0" Grid.Column="2" TextAlignment="Center" Foreground="White"/>
+
+        <!--La tierra-->
+
+        <!--<Image  Source="Assets/MAPON.jpg" Grid.Column="2"   Grid.Row="1" Grid.RowSpan="2"  Stretch="Fill" />-->
+        <Image Source="Assets/MAPON.jpg" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" Stretch="Fill" />
+        <ListView Grid.Column="2" Grid.Row="1"  ItemsSource="{x:Bind ListaCatastrofes}"  Width="auto" HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" IsItemClickEnabled="True" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel
+                        Orientation="Horizontal"
+                        Height="50">
+                        <TextBlock Text="{Binding Id}"/>
+                        <Image Source="{Binding Imagen}"/>
+                        <TextBlock Text="{Binding Nombre}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+        <Image Grid.Column="2" HorizontalAlignment="Left" Height="auto"   VerticalAlignment="Top" Width="auto" Source="Assets/TIRRA.png"/>
+
 
 
     </Grid>
