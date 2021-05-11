@@ -32,7 +32,7 @@ namespace Feed_The_Hades
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             if (ListaCatastrofes != null) // Carga la lista de ModelView
-                foreach (Catastrofe catastrofe in Model.GetAllDrones())
+                foreach (Catastrofe catastrofe in Model.GetAllCatastrofes())
                 {
                     VMCatastrofe VMitem = new VMCatastrofe(catastrofe);
                     ListaCatastrofes.Add(VMitem);
