@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -26,5 +27,18 @@ namespace Feed_The_Hades
         {
             this.InitializeComponent();
         }
+
+        public ObservableCollection<VMCatastrofe> ListaCatastrofes{ get; } = new ObservableCollection<VMCatastrofe>();
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (ListaCatastrofes != null) // Carga la lista de ModelView
+                foreach (Catastrofe catastrofe in Model.GetAllDrones())
+                {
+                    VMCatastrofe VMitem = new VMCatastrofe(catastrofe);
+                    ListaCatastrofes.Add(VMitem);
+                }
+        }
+
     }
 }
