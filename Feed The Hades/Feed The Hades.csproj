@@ -147,6 +147,10 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\alexcalvo.png" />
+    <Content Include="Assets\leomesi.png" />
+    <Content Include="Assets\rombo.png" />
+    <Content Include="Assets\soulbutton.png" />
     <Content Include="Assets\MAPON.jpg" />
     <Content Include="Assets\TIRRA.png" />
     <Content Include="Assets\eltio.png" />
