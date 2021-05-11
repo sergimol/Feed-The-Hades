@@ -7,25 +7,60 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
 
+
+
+        <ItemsPanelTemplate x:Key="ImageGridView_ItemsPanelTemplate">
+            <ItemsWrapGrid Orientation="Horizontal"
+                           HorizontalAlignment="Center" />
+        </ItemsPanelTemplate>
+    </Page.Resources>
     <Grid Background="Black" Margin="10,10,10,10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="628" />
-            <ColumnDefinition Width="Auto" MinWidth="442" />
-            <ColumnDefinition />
+            <ColumnDefinition Width="*" MinWidth="442" />
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
 
-            <RowDefinition Height="58" />
-            <RowDefinition Height="614"/>
-            <RowDefinition Height="Auto" MinHeight="241"  />
+            <RowDefinition Height="58"/>
+            <RowDefinition Height="620*"/>
+            <RowDefinition Height="1*" MinHeight="241"/>
+            <RowDefinition Height="100"/>
 
-            <RowDefinition />
         </Grid.RowDefinitions>
         <Rectangle Fill="Purple" Grid.Column="0" Grid.RowSpan="2" />
         <Rectangle Fill="LightPink" Grid.RowSpan="2" Grid.Column="1"  />
-        <Rectangle Fill="Beige" Grid.Row="2" Grid.ColumnSpan="2"/>
-        <Rectangle Fill="Red" Grid.Row="3" Grid.ColumnSpan="3"  />
+        <!--DIOSES GRIEGOS-->
+        <ScrollViewer Grid.Row="2" Grid.ColumnSpan="2">
+            <GridView   Background="#FFDEB4CB"  >
+                <Image Source="/Assets/StoreLogo.png" Width="150" Height="150" Margin="20, 20,20,20"/>
+                <Image Source="/Assets/StoreLogo.png" Width="150" Height="150" Margin="20, 20,20,20"/>
+                <Image Source="/Assets/StoreLogo.png" Width="150" Height="150" Margin="20, 20,20,20"/>
+                <Image Source="/Assets/StoreLogo.png" Width="150" Height="150" Margin="20, 20,20,20"/>
+                <Image Source="/Assets/StoreLogo.png" Width="150" Height="150" Margin="20, 20,20,20"/>
+                <Image Source="/Assets/StoreLogo.png" Width="150" Height="150" Margin="20, 20,20,20"/>
+                <Image Source="/Assets/StoreLogo.png" Width="150" Height="150" Margin="20, 20,20,20"/>
+                <Image Source="/Assets/StoreLogo.png" Width="150" Height="150" Margin="20, 20,20,20"/>
+                <Image Source="/Assets/StoreLogo.png" Width="150" Height="150" Margin="20, 20,20,20"/>
+                <Image Source="/Assets/StoreLogo.png" Width="150" Height="150" Margin="20, 20,20,20"/>
+            </GridView>
+        </ScrollViewer>
+        <!--BARRA DE MUERTES-->
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="3" Background="Red" Orientation="Vertical" Padding="0,20,0,0">
+            <TextBlock Text="MUERTES TOTALES" FontSize="20" HorizontalAlignment="Center" />
+            <TextBlock Text="3949/7000000" FontSize="20" HorizontalAlignment="Center" />
+        </StackPanel>
+        <!--AJUSTES DE CONFIG Y EXIT-->
+        <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Vertical">
+
+            <AppBarButton Icon="Setting" HorizontalAlignment="Right" VerticalAlignment="Bottom"  BorderBrush="#FF740B0B" BorderThickness="5" Height="50" Background="#FF746666"/>
+            <AppBarButton Icon="Cancel" HorizontalAlignment="Right" VerticalAlignment="Bottom"  BorderBrush="#FF740B0B" BorderThickness="5" Height="50" Background="#FF871919"/>
+
+        </StackPanel>
+
+
         <Rectangle Fill="Green
                    " Grid.RowSpan="3" Grid.Column="2"  />
 
