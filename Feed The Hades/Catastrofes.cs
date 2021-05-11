@@ -8,7 +8,7 @@ namespace Feed_The_Hades
 {
     public class Catastrofe
     {
-        public enum estados { Aterrizado, Autonomo, Manual };
+        public enum estados { Desbloqueado, NoDesbloqueado, Disponible, NoDisponible };
 
         public int Id { get; set; }
         public string Nombre { get; set; }
@@ -37,7 +37,7 @@ namespace Feed_The_Hades
             Nombre = "Terremoto",
             Imagen = "Assets\\TIRRA.png",
             Explicacion = @"Explicación Dron1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id facilisis lectus. Cras nec convallis ante, quis pulvinar tellus. Integer dictum accumsan pulvinar. Pellentesque eget enim sodales sapien vestibulum consequat. Maecenas eu sapien ac urna aliquam dictum. Nullam eget mattis metus. Donec pharetra, tellus in mattis tincidunt, magna ipsum gravida nibh, vitae lobortis ante odio vel quam.",
-            Estado = Catastrofe.estados.Aterrizado,
+            Estado = Catastrofe.estados.Desbloqueado,
             X = 10,
             Y = 10,
             RX =100,
@@ -49,7 +49,7 @@ namespace Feed_The_Hades
             Nombre = "Tsunami",
             Imagen = "Assets\\TIRRA.png",
             Explicacion = @"Explicación Dron1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id facilisis lectus. Cras nec convallis ante, quis pulvinar tellus. Integer dictum accumsan pulvinar. Pellentesque eget enim sodales sapien vestibulum consequat. Maecenas eu sapien ac urna aliquam dictum. Nullam eget mattis metus. Donec pharetra, tellus in mattis tincidunt, magna ipsum gravida nibh, vitae lobortis ante odio vel quam.",
-            Estado = Catastrofe.estados.Aterrizado,
+            Estado = Catastrofe.estados.Desbloqueado,
             X = 10,
             Y = 10,
             RX =100,
@@ -61,7 +61,7 @@ namespace Feed_The_Hades
             Nombre = "Guerra",
             Imagen = "Assets\\TIRRA.png",
             Explicacion = @"Explicación Dron1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id facilisis lectus. Cras nec convallis ante, quis pulvinar tellus. Integer dictum accumsan pulvinar. Pellentesque eget enim sodales sapien vestibulum consequat. Maecenas eu sapien ac urna aliquam dictum. Nullam eget mattis metus. Donec pharetra, tellus in mattis tincidunt, magna ipsum gravida nibh, vitae lobortis ante odio vel quam.",
-            Estado = Catastrofe.estados.Aterrizado,
+            Estado = Catastrofe.estados.Desbloqueado,
             X = 10,
             Y = 10,
             RX =100,
@@ -71,12 +71,12 @@ namespace Feed_The_Hades
         };
 
 
-        public static IList<Catastrofe> GetAllDrones()
+        public static IList<Catastrofe> GetAllCatastrofes()
         {
             return Catastrofes;
         }
 
-        public static Catastrofe GetDronById(int id)
+        public static Catastrofe GetCatastrofeById(int id)
         {
             return Catastrofes[id];
         }
