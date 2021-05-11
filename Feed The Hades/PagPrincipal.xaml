@@ -32,6 +32,46 @@
         </Grid.RowDefinitions>
         <Rectangle Fill="Purple" Grid.Column="0" Grid.RowSpan="2" />
         <Rectangle Fill="LightPink" Grid.RowSpan="2" Grid.Column="1"  />
+
+
+        <!--EL HADES-->
+        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Vertical">
+
+            <!--BOTON DE ALMAS-->
+            <Button x:Name="soul" Margin="0,36,0,0"
+                    HorizontalAlignment="Center" Height="377" Width="610" Background="#00000000" FocusVisualPrimaryBrush="#00000000" FocusVisualSecondaryBrush="Transparent">
+                <Grid>
+                    <Image Source="Assets/soulbutton.png" Stretch="Uniform" />
+                    <TextBlock Text="45.000 ALMAS" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FF693D81" FontSize="30"/>
+                </Grid>
+
+            </Button>
+
+            <!--INDICADOR DE ALMAS ACUMULATIVAS-->
+            <StackPanel x:Name="IndicadorDeAlmas"
+                    Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Background="#FBD89DD8" Margin="0,10,0,0" Height="36" Width="211" 
+                    BorderBrush="White"
+                        >
+                <TextBlock
+                FontSize="20"
+                Text="1.000 ALMAS/S"  Foreground="White" 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top">
+                </TextBlock>
+            </StackPanel>
+
+            <!--INDICADOR DE LOS DIOSES ACTIVOS-->
+            <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" Margin="0,20"
+                         >
+                <Image Source="Assets/soulbutton.png" Stretch="Uniform" Width="100" Height="100" />
+                <Image Source="Assets/soulbutton.png" Stretch="Uniform" Width="100" Height="100" />
+                <Image Source="Assets/soulbutton.png" Stretch="Uniform" Width="100" Height="100" />
+            </StackPanel>
+
+        </StackPanel>
         <!--DIOSES GRIEGOS-->
         <ScrollViewer Grid.Row="2" Grid.ColumnSpan="2">
             <GridView   Background="#FFDEB4CB"  >
