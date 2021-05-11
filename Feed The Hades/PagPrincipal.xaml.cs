@@ -38,5 +38,10 @@ namespace Feed_The_Hades
                     ListaCatastrofes.Add(VMitem);
                 }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
