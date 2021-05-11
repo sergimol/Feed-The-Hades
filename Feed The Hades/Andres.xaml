@@ -10,7 +10,7 @@
 
     <Page.Resources>
         <ImageBrush x:Key="messi" ImageSource="Assets/soulbutton.png" Stretch="Uniform"/>
-       
+
     </Page.Resources>
 
 
@@ -18,7 +18,7 @@
         <!--<Grid.Resources>
             
         </Grid.Resources>-->
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="628" />
             <ColumnDefinition Width="Auto" MinWidth="442" />
@@ -45,25 +45,24 @@
 
 
 
-        <Button x:Name="soul" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Margin="0,100"
-                HorizontalAlignment="Center" Height="250" Width="250" Background="#00000000" FocusVisualPrimaryBrush="#00000000" FocusVisualSecondaryBrush="Transparent">
+        <Button x:Name="soul" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Margin="0,36,0,0"
+                HorizontalAlignment="Center" Height="314" Width="418" Background="#00000000" FocusVisualPrimaryBrush="#00000000" FocusVisualSecondaryBrush="Transparent">
             <Grid>
                 <Image Source="Assets/soulbutton.png" Stretch="Uniform" />
                 <TextBlock Text="45.000 ALMAS" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FF693D81" FontSize="30"/>
             </Grid>
 
-    </Button>
-
-        <Button>
-            <StackPanel>
-                
-            </StackPanel>
         </Button>
 
-       
+        <StackPanel>
+            <Image Source="Assets/soulbutton.png" Stretch="Uniform" />
+            
+        </StackPanel>
 
 
-       
+
+
+
 
 
 
