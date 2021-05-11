@@ -123,6 +123,9 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Catastrofes.cs" />
+    <Compile Include="PagPrincipal.xaml.cs">
+      <DependentUpon>PagPrincipal.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Diego.xaml.cs">
       <DependentUpon>Diego.xaml</DependentUpon>
     </Compile>
@@ -145,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\TIRRA.png" />
+    <Content Include="Assets\eltio.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -162,6 +166,10 @@
     <Page Include="Andres.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PagPrincipal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Diego.xaml">
       <Generator>MSBuild:Compile</Generator>
