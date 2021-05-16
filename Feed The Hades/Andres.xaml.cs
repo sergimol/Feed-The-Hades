@@ -22,11 +22,34 @@ namespace Feed_The_Hades
     /// </summary>
     public sealed partial class Andres : Page
     {
+
+        int SOULS;
         public Andres()
         {
             this.InitializeComponent();
         }
 
-     
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            SharedShadow.Receivers.Add(purpleRect);
+
+            soul.Translation += new System.Numerics.Vector3(0, 0, 32);
+            //soul.Rotation = 45;
+
+            SOULS = 0;
+            soulText.Text = SOULS.ToString() + " ALMAS";
+
+            //Mueves los rectángulos hacia delante 
+
+
+        }
+
+        private void soul_Click(object sender, RoutedEventArgs e)
+        {
+            SOULS++;
+            soulText.Text = SOULS.ToString() +1000 + " ALMAS";
+        }
+
+
     }
 }
