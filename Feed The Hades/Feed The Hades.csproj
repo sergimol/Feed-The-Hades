@@ -148,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\alexcalvo.png" />
+    <Content Include="Assets\hadesBackground.jpg" />
     <Content Include="Assets\hadesIcon.png" />
     <Content Include="Assets\leomesi.png" />
     <Content Include="Assets\rombo.png" />

@@ -32,8 +32,12 @@ namespace Feed_The_Hades
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             SharedShadow.Receivers.Add(purpleRect);
+            SharedShadow.Receivers.Add(hadesBack);
+
+
 
             soul.Translation += new System.Numerics.Vector3(0, 0, 32);
+            auxRectSoul.Translation += new System.Numerics.Vector3(0, 0, 32);
             //soul.Rotation = 45;
 
             SOULS = 0;
