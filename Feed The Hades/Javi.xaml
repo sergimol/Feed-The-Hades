@@ -16,6 +16,7 @@
                     Padding="40,40,40,40" 
                     Margin="0,80,0,0"
                     Background="#33FFFFFF"
+                    KeyDown="Panel_Navigation"
                     >
 
             <!-- TabIndex="0"                       Orden de tabulacion-->
@@ -44,8 +45,10 @@
                 Margin="0, 40, 0, 40"
                 FontSize="60"
                 Content="Nueva partida"
+                Click="playButton_Click"
                 ToolTipService.ToolTip="Click para crear nueva partida"
                 IsTabStop="True"
+                    
                 UseSystemFocusVisuals="True">
 
                 <Button.KeyboardAccelerators>
@@ -59,6 +62,7 @@
                 Margin="0, 40, 0, 40"
                 FontSize="60"
                 Content="Nueva partida"
+                Click="playButton_Click"
                 ToolTipService.ToolTip="Click para crear nueva partida"          
                 IsTabStop="True"
                 UseSystemFocusVisuals="True"
@@ -71,6 +75,7 @@
                 Margin="0, 40, 0, 40"
                 FontSize="60"
                 Content="Nueva partida"
+                Click="playButton_Click"    
                 ToolTipService.ToolTip="Click para crear nueva partida"          
                 IsTabStop="True"
                 UseSystemFocusVisuals="True">
@@ -81,12 +86,13 @@
             HorizontalAlignment="Center"
             Orientation="Horizontal" Background="Transparent"
             Height="150"
+            KeyDown="Panel_Navigation"
             >
 
             <!--Config Button-->
             <AppBarButton Icon="Setting" HorizontalAlignment="Center" VerticalAlignment="Bottom"  BorderBrush="#FF740B0B" BorderThickness="5" Height="120" Background="#66360505"/>
             <!--Quit button-->
-            <AppBarButton Icon="Clear"  HorizontalAlignment="Center" VerticalAlignment="Bottom" BorderBrush="#FF740B0B" BorderThickness="5" Height="120" Background="#68360505"/>
+            <AppBarButton Icon="Clear" Click="exitButton_Click"  HorizontalAlignment="Center" VerticalAlignment="Bottom" BorderBrush="#FF740B0B" BorderThickness="5" Height="120" Background="#68360505"/>
 
 
             <!--<Button x:Name="optionsButton"
