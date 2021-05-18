@@ -24,6 +24,7 @@ namespace Feed_The_Hades
     /// </summary>
     public sealed partial class PagPrincipal : Page
     {
+        int SOULS;
         public PagPrincipal()
         {
             this.InitializeComponent();
@@ -32,6 +33,23 @@ namespace Feed_The_Hades
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+
+            SharedShadow.Receivers.Add(purpleRect);
+            SharedShadow.Receivers.Add(hadesBack);
+
+
+
+            soul.Translation += new System.Numerics.Vector3(0, 0, 32);
+            auxRectSoul.Translation += new System.Numerics.Vector3(0, 0, 32);
+            cerbero.Translation += new System.Numerics.Vector3(0, 0, 32);
+
+            //soul.Rotation = 45;
+
+            SOULS = 0;
+            soulText.Text = SOULS.ToString() + " ALMAS";
+
+            //Mueves los rectángulos hacia delante 
+
             if (ListaCatastrofes != null) // Carga la lista de ModelView
                 foreach (Catastrofe catastrofe in Model.GetAllCatastrofes())
                 {
@@ -65,6 +83,12 @@ namespace Feed_The_Hades
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void soul_Click(object sender, RoutedEventArgs e)
+        {
+            SOULS++;
+            soulText.Text = SOULS.ToString() + 1000 + " ALMAS";
         }
     }
 }
