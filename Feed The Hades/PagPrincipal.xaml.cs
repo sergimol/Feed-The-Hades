@@ -80,15 +80,22 @@ namespace Feed_The_Hades
             return false;
         }
         #endregion
-        private void Button_Click(object sender, RoutedEventArgs e)
+        #region Buttons
+        //Click config
+        //private void configButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    this.Frame.Navigate(typeof(Page2));
+        //}
+        //Click exit
+        private void exitButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Application.Current.Exit();
         }
-
         private void soul_Click(object sender, RoutedEventArgs e)
         {
             SOULS++;
             soulText.Text = SOULS.ToString() + 1000 + " ALMAS";
         }
+        #endregion
     }
 }

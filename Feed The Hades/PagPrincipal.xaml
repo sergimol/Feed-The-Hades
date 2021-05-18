@@ -208,7 +208,7 @@
                 <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Vertical">
 
                     <AppBarButton Icon="Setting" HorizontalAlignment="Right" VerticalAlignment="Bottom"  BorderBrush="#FF740B0B" BorderThickness="5" Height="50" Background="#FF746666"/>
-                    <AppBarButton Icon="Cancel" HorizontalAlignment="Right" VerticalAlignment="Bottom"  BorderBrush="#FF740B0B" BorderThickness="5" Height="50" Background="#FF871919"/>
+                    <AppBarButton Icon="Cancel" Click="exitButton_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"  BorderBrush="#FF740B0B" BorderThickness="5" Height="50" Background="#FF871919"/>
 
                 </StackPanel>
 
