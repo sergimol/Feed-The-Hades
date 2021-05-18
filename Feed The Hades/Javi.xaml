@@ -9,37 +9,39 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="#FFAD9FCB">
-        <StackPanel x:Name="Panel"
+
+        <Viewbox Stretch="Uniform" StretchDirection="Both">
+
+            <StackPanel x:Name="Panel"
                     Orientation="Vertical"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Top"
-                    Padding="40,40,40,40" 
+                    Padding="40,40,40,0" 
                     Margin="0,80,0,0"
                     Background="#33FFFFFF"
                     KeyDown="Panel_Navigation"
                     >
 
-            <!-- TabIndex="0"                       Orden de tabulacion-->
-            <!-- Click ="playButton_click"          Ejecuta el metodo onClick-->
-            <!-- KeyDown="playButton_Keydown"       Ejecuta el metodo onKeydown-->
-            <!-- Background="Transparent"           Fondo trasparente-->
-            <!-- ToolTipService.ToolTip="texto"     Cuando se mantiene el raton encima sale ese texto-->
-
-            <!--Titulo-->
-            <StackPanel x:Name="Title"
+                <!-- TabIndex="0"                       Orden de tabulacion-->
+                <!-- Click ="playButton_click"          Ejecuta el metodo onClick-->
+                <!-- KeyDown="playButton_Keydown"       Ejecuta el metodo onKeydown-->
+                <!-- Background="Transparent"           Fondo trasparente-->
+                <!-- ToolTipService.ToolTip="texto"     Cuando se mantiene el raton encima sale ese texto-->
+                <!--Titulo-->
+                <StackPanel x:Name="Title"
                     Orientation="Vertical"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                      Background="#99630808"
                      >
-                <TextBlock
+                    <TextBlock
                 FontSize="80"
                 Text="Feed the Hades"  Foreground="#FF360505" Margin="40,40,40,40">
-                </TextBlock>
-            </StackPanel>
+                    </TextBlock>
+                </StackPanel>
 
-            <!--Boton 1-->
-            <Button x:Name="playButton"
+                <!--Boton 1-->
+                <Button x:Name="playButton"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Margin="0, 40, 0, 40"
@@ -51,12 +53,12 @@
                     
                 UseSystemFocusVisuals="True">
 
-                <Button.KeyboardAccelerators>
-                    <KeyboardAccelerator Modifiers="Control" Key="J"/>
-                </Button.KeyboardAccelerators>
-            </Button>
-            <!--Boton 2-->
-            <Button x:Name="configButton"
+                    <Button.KeyboardAccelerators>
+                        <KeyboardAccelerator Modifiers="Control" Key="J"/>
+                    </Button.KeyboardAccelerators>
+                </Button>
+                <!--Boton 2-->
+                <Button x:Name="configButton"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Margin="0, 40, 0, 40"
@@ -67,9 +69,9 @@
                 IsTabStop="True"
                 UseSystemFocusVisuals="True"
                 >
-            </Button>
-            <!--Boton 3-->
-            <Button x:Name="configButton2"
+                </Button>
+                <!--Boton 3-->
+                <Button x:Name="configButton2"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Margin="0, 40, 0, 40"
@@ -79,20 +81,23 @@
                 ToolTipService.ToolTip="Click para crear nueva partida"          
                 IsTabStop="True"
                 UseSystemFocusVisuals="True">
-            </Button>
-        </StackPanel>
-        <StackPanel
+                </Button>
+                <StackPanel
             VerticalAlignment="Bottom"
             HorizontalAlignment="Center"
             Orientation="Horizontal" Background="Transparent"
             Height="150"
             KeyDown="Panel_Navigation"
             >
+                    <!--Config Button-->
+                    <AppBarButton Icon="Setting" HorizontalAlignment="Center" VerticalAlignment="Bottom"  BorderBrush="#FF740B0B" BorderThickness="5" Height="120" Background="#66360505"/>
+                    <!--Quit button-->
+                    <AppBarButton Icon="Clear" Click="exitButton_Click"  HorizontalAlignment="Center" VerticalAlignment="Bottom" BorderBrush="#FF740B0B" BorderThickness="5" Height="120" Background="#68360505"/>
 
-            <!--Config Button-->
-            <AppBarButton Icon="Setting" HorizontalAlignment="Center" VerticalAlignment="Bottom"  BorderBrush="#FF740B0B" BorderThickness="5" Height="120" Background="#66360505"/>
-            <!--Quit button-->
-            <AppBarButton Icon="Clear" Click="exitButton_Click"  HorizontalAlignment="Center" VerticalAlignment="Bottom" BorderBrush="#FF740B0B" BorderThickness="5" Height="120" Background="#68360505"/>
+
+                </StackPanel>
+            </StackPanel>
+
 
 
             <!--<Button x:Name="optionsButton"
@@ -116,6 +121,6 @@
                     i>
                 <Image Source="/Assets/StoreLogo.png"/>
             </Button>-->
-        </StackPanel>
+        </Viewbox>
     </Grid>
 </Page>
