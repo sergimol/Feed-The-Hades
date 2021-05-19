@@ -95,6 +95,8 @@ namespace Feed_The_Hades
         {
             SOULS++;
             soulText.Text = SOULS.ToString() + 1000 + " ALMAS";
+
+            //popUP.IsOpen = true;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
