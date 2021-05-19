@@ -96,6 +96,11 @@ namespace Feed_The_Hades
             SOULS++;
             soulText.Text = SOULS.ToString() + 1000 + " ALMAS";
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
         #endregion
     }
 }
