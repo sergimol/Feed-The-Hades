@@ -30,18 +30,19 @@ namespace Feed_The_Hades
             this.InitializeComponent();
         }
         public ObservableCollection<VMCatastrofe> ListaCatastrofes { get; } = new ObservableCollection<VMCatastrofe>();
+        public ObservableCollection<VMMejora> ListaMejoras { get; } = new ObservableCollection<VMMejora>();
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
 
-            SharedShadow.Receivers.Add(purpleRect);
-            SharedShadow.Receivers.Add(hadesBack);
+            //SharedShadow.Receivers.Add(purpleRect);
+            //SharedShadow.Receivers.Add(hadesBack);
 
 
 
             soul.Translation += new System.Numerics.Vector3(0, 0, 32);
             auxRectSoul.Translation += new System.Numerics.Vector3(0, 0, 32);
-            cerbero.Translation += new System.Numerics.Vector3(0, 0, 32);
+            //cerbero.Translation += new System.Numerics.Vector3(0, 0, 32);
 
             //soul.Rotation = 45;
 
@@ -56,6 +57,14 @@ namespace Feed_The_Hades
                     VMCatastrofe VMitem = new VMCatastrofe(catastrofe);
                     ListaCatastrofes.Add(VMitem);
                 }
+
+            if(ListaMejoras != null)
+                foreach (Mejora mejora in MejoraModel.GetAllMejoras())
+                {
+                    VMMejora vMMejora = new VMMejora(mejora);
+                    ListaMejoras.Add(vMMejora);
+                }
+
             //Control de la vuelta atras
             if (this.Frame.CanGoBack)
                 SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
