@@ -168,11 +168,6 @@
                           FlowDirection="LeftToRight"
                           DragOver="panteon_DragOver"
                               
-                          DropCompleted="panteon_DropCompleted"
-                          Drop="panteon_Drop"
-                              
-                          PointerMoved="panteon_PointerMoved"
-                          PointerEntered="panteon_PointerEntered"
                           ItemsSource="{x:Bind ListaPanteon}"
                               >
                         <GridView.ItemTemplate>
@@ -270,8 +265,6 @@
                           ItemsSource="{x:Bind ListaDioses}"
                           DragItemsStarting="ItemGridView_DragItemsStarting"
                           CanDrag="True"
-                          DropCompleted="ContentGridView_DropCompleted"
-                          DragLeave="ContentGridView_DragLeave"
                           DragItemsCompleted="ContentGridView_DragItemsCompleted"
                           
                           >

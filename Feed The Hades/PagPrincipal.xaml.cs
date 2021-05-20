@@ -202,7 +202,6 @@ namespace Feed_The_Hades
             i++;
             box.Text = i.ToString();
         }
-        #endregion
 
         private void shop_Click(object sender, RoutedEventArgs e)
         {
@@ -254,6 +253,7 @@ namespace Feed_The_Hades
         private void UpdateIndex()
         {
             index = -1;
+            indexDios = -1;
         }
 
         //Updatea las almas 
@@ -263,6 +263,7 @@ namespace Feed_The_Hades
             soulText.Text = SOULS.ToString() + " ALMAS";
         }
 
+        #endregion
         #region sound
         private void soundToggle_Toggled(object sender, RoutedEventArgs e)
         {
@@ -308,47 +309,6 @@ namespace Feed_The_Hades
             draggedItem = e.Items[0];
             
         }
-
-
-
-        private async void ItemGridView2_Drop(object sender, DragEventArgs e)
-
-        {
-
-            string data = await e.Data.GetView().GetTextAsync("data");
-
-
-
-            //Find the position where item will be dropped in the gridview
-
-            Point pos = e.GetPosition(panteon.ItemsPanelRoot);
-
-
-
-            //Get the size of one of the gridview items
-
-            GridViewItem viewItem = (GridViewItem)panteon.ContainerFromIndex(0);
-
-
-
-            double itemHeight = viewItem.ActualHeight + viewItem.Margin.Top + viewItem.Margin.Bottom;
-
-            double itemWidth = viewItem.ActualWidth + viewItem.Margin.Left + viewItem.Margin.Right;
-
-
-
-            //Determine the index of the item from the item position (assumed all items are the same size)
-
-            int index = Math.Min(panteon.Items.Count - 1, (int)(pos.Y / itemHeight) * 4 + (int)(pos.X / itemWidth));
-
-
-
-            var item = panteon.Items[index];
-
-            item = data;
-
-        }
-
         private void panteon_DragOver(object sender, DragEventArgs e)
         {
             //Find the position where item will be dropped in the gridview
@@ -378,53 +338,6 @@ namespace Feed_The_Hades
             
         }
 
-        private void panteon_DropCompleted(UIElement sender, DropCompletedEventArgs args)
-        {
-            ListaPanteon[index] = (draggedItem as VMDios);
-        }
-
-        private void panteon_Drop(object sender, DragEventArgs e)
-        {
-
-            ListaPanteon[index] = (draggedItem as VMDios);
-        }
-
-        private void panteon_PointerMoved(object sender, PointerRoutedEventArgs e)
-        {
-            //if (index >= 0)
-            //{
-            //    ListaPanteon[index] = (draggedItem as VMDios);
-            //    index = -1;
-            //}
-        }
-
-        private void panteon_PointerEntered(object sender, PointerRoutedEventArgs e)
-        {
-            //if (index >= 0)
-            //{
-            //    ListaPanteon[index] = (draggedItem as VMDios);
-            //    index = -1;
-            //}
-        }
-
-        private void ContentGridView_DropCompleted(UIElement sender, DropCompletedEventArgs args)
-        {
-            //if (index >= 0)
-            //{
-            //    ListaPanteon[index] = (draggedItem as VMDios);
-            //    index = -1;
-            //}
-        }
-
-        private void ContentGridView_DragLeave(object sender, DragEventArgs e)
-        {
-            //if (index >= 0)
-            //{
-            //    ListaPanteon[index] = (draggedItem as VMDios);
-            //    index = -1;
-            //}
-        }
-
         private void ContentGridView_DragItemsCompleted(ListViewBase sender, DragItemsCompletedEventArgs args)
         {
             if (index >= 0)
@@ -441,14 +354,5 @@ namespace Feed_The_Hades
         }
 
 
-        private void panteon_DragLeave(object sender, DragEventArgs e)
-        {
-            index = -1;
-        }
-
-        private void panteon_FocusDisengaged(Control sender, FocusDisengagedEventArgs args)
-        {
-            index = -1;
-        }
     }
 }
