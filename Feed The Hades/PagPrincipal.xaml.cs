@@ -130,7 +130,7 @@ namespace Feed_The_Hades
                 }
             
             if (ListaPanteon != null)
-                foreach (Dios dios in ModelDios.GetAllDioses())
+                foreach (Dios dios in ModelDios.GetAllPanteones())
                 {
                     VMDios VMDios = new VMDios(dios);
                     ListaPanteon.Add(VMDios);

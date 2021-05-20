@@ -49,6 +49,7 @@ namespace Feed_The_Hades
         }
     }
 
+
     public class VMMejora : Mejora
     {
         public VMMejora(Mejora m)

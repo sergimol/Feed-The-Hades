@@ -117,6 +117,28 @@ namespace Feed_The_Hades
             }
         };
 
+
+        public static List<Dios> Panteon = new List<Dios>()
+        {
+            new Dios()
+            {
+                Id = -1,
+                Nombre = "Apollo",
+                Imagen = "/Assets/leomesi.png",
+            },new Dios()
+            {
+                Id = -1,
+                Nombre = "Apollo",
+                Imagen = "/Assets/leomesi.png",
+            },new Dios()
+            {
+                Id = -1,
+                Nombre = "Apollo",
+                Imagen = "/Assets/leomesi.png",
+            }
+        };
+
+
         public static IList<Dios> GetAllDioses()
         {
             return Dioses;
@@ -124,6 +146,15 @@ namespace Feed_The_Hades
         public static Dios GetDiosById(int id)
         {
             return Dioses[id];
+        }
+
+        public static IList<Dios> GetAllPanteones()
+        {
+            return Panteon;
+        }
+        public static Dios GetPanteonById(int id)
+        {
+            return Panteon[id];
         }
     }
 
