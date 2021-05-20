@@ -248,12 +248,11 @@
                 </GridView>
             </ScrollViewer>
             <!--BARRA DE MUERTES-->
-            <ProgressBar Grid.Row="3" Grid.ColumnSpan="3" Height="100" Value="10" Background="#FFF19999" Foreground="Red">
-                
-            </ProgressBar>
+            <ProgressBar x:Name="deathBar" Grid.Row="3" Grid.ColumnSpan="3" Height="100" Value="10" Background="#FFF19999" Foreground="Red"/>
+
             <StackPanel Grid.Row="3" Grid.ColumnSpan="3"  Orientation="Vertical" Padding="0,20,0,0">
                 <TextBlock Text="MUERTES TOTALES" FontSize="20" HorizontalAlignment="Center" />
-                <TextBlock Text="/7000000" FontSize="40" HorizontalAlignment="Center" />
+                <TextBlock x:Name="deathBarText" Text="/7000000" FontSize="40" HorizontalAlignment="Center" />
             </StackPanel>
             
             

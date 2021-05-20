@@ -28,9 +28,14 @@ namespace Feed_The_Hades
         //Timer para el update del juego
         DispatcherTimer UpdateTimer;
 
+        //PARA ALMAS
         int SOULS;
         int soulsPerSecond = 100;
         int soulsPerClick = 10;
+
+        //PARA MUERTES
+        long DEATHS = 0;
+        int incomingKills = 0;
         public PagPrincipal()
         {
             this.InitializeComponent();
@@ -55,7 +60,11 @@ namespace Feed_The_Hades
             //soul.Rotation = 45;
 
             SOULS = 0;
+            DEATHS = 0;
             soulText.Text = SOULS.ToString() + " ALMAS";
+            deathBarText.Text = 0 + "/7000000000";
+            deathBar.Value = 0;
+
 
             //Mueves los rectángulos hacia delante 
 
@@ -114,6 +123,15 @@ namespace Feed_The_Hades
         {
             SOULS+=soulsPerClick;
             soulText.Text = SOULS.ToString() + " ALMAS";
+
+            if(DEATHS < 7000000000)
+            {
+                incomingKills = 100000000;
+                DEATHS += incomingKills;
+                deathBarText.Text = DEATHS.ToString() + "/7000000000";
+                deathBar.Value = DEATHS * 100 / 7000000000;
+            }
+            
 
             
         }
