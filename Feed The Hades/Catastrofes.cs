@@ -103,7 +103,7 @@ namespace Feed_The_Hades
             {
                 Id = 1,
                 Nombre = "Apollo",
-                Imagen = "/Assets/eltio.png",
+                Imagen = "/Assets/alexcalvo.png",
             },new Dios()
             {
                 Id = 2,

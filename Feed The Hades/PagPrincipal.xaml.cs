@@ -34,6 +34,9 @@ namespace Feed_The_Hades
         int SOULS;
         int soulsPerSecond = 100;
         int soulsPerClick = 10;
+        int index = -1;
+
+        object draggedItem;
 
         MediaPlayer song;
 
@@ -75,6 +78,7 @@ namespace Feed_The_Hades
         public ObservableCollection<VMCatastrofe> ListaCatastrofes { get; } = new ObservableCollection<VMCatastrofe>();
         public ObservableCollection<VMMejora> ListaMejoras { get; } = new ObservableCollection<VMMejora>();
         public ObservableCollection<VMDios> ListaDioses { get; } = new ObservableCollection<VMDios>();
+        public ObservableCollection<VMDios> ListaPanteon { get; } = new ObservableCollection<VMDios>();
 
 
 
@@ -99,6 +103,7 @@ namespace Feed_The_Hades
             deathBar.Value = 0;
 
 
+
             //Mueves los rectángulos hacia delante 
 
             if (ListaCatastrofes != null) // Carga la lista de ModelView
@@ -114,12 +119,19 @@ namespace Feed_The_Hades
                     VMMejora vMMejora = new VMMejora(mejora);
                     ListaMejoras.Add(vMMejora);
                 }
-            
+
             if (ListaDioses != null)
                 foreach (Dios dios in ModelDios.GetAllDioses())
                 {
                     VMDios VMDios = new VMDios(dios);
                     ListaDioses.Add(VMDios);
+                }
+            
+            if (ListaPanteon != null)
+                foreach (Dios dios in ModelDios.GetAllDioses())
+                {
+                    VMDios VMDios = new VMDios(dios);
+                    ListaPanteon.Add(VMDios);
                 }
 
             //Control de la vuelta atras
@@ -279,6 +291,139 @@ namespace Feed_The_Hades
                 DEATHS += incomingKills;
                 deathBarText.Text = DEATHS.ToString() + "/7000000000";
                 deathBar.Value = DEATHS * 100 / 7000000000;
+            }
+        }
+
+        private void ItemGridView_DragItemsStarting(object sender, DragItemsStartingEventArgs e)
+
+        {
+
+            draggedItem = e.Items[0];
+
+        }
+
+
+
+        private async void ItemGridView2_Drop(object sender, DragEventArgs e)
+
+        {
+
+            string data = await e.Data.GetView().GetTextAsync("data");
+
+
+
+            //Find the position where item will be dropped in the gridview
+
+            Point pos = e.GetPosition(panteon.ItemsPanelRoot);
+
+
+
+            //Get the size of one of the gridview items
+
+            GridViewItem viewItem = (GridViewItem)panteon.ContainerFromIndex(0);
+
+
+
+            double itemHeight = viewItem.ActualHeight + viewItem.Margin.Top + viewItem.Margin.Bottom;
+
+            double itemWidth = viewItem.ActualWidth + viewItem.Margin.Left + viewItem.Margin.Right;
+
+
+
+            //Determine the index of the item from the item position (assumed all items are the same size)
+
+            int index = Math.Min(panteon.Items.Count - 1, (int)(pos.Y / itemHeight) * 4 + (int)(pos.X / itemWidth));
+
+
+
+            var item = panteon.Items[index];
+
+            item = data;
+
+        }
+
+        private void panteon_DragOver(object sender, DragEventArgs e)
+        {
+            //Find the position where item will be dropped in the gridview
+
+            Point pos = e.GetPosition(panteon.ItemsPanelRoot);
+
+
+
+            //Get the size of one of the gridview items
+
+            GridViewItem viewItem = (GridViewItem)panteon.ContainerFromIndex(0);
+
+
+
+            double itemHeight = viewItem.ActualHeight + viewItem.Margin.Top + viewItem.Margin.Bottom;
+
+            double itemWidth = viewItem.ActualWidth + viewItem.Margin.Left + viewItem.Margin.Right;
+
+
+
+            //Determine the index of the item from the item position (assumed all items are the same size)
+
+            index = Math.Min(panteon.Items.Count - 1, (int)(pos.Y / itemHeight) * 4 + (int)(pos.X / itemWidth));
+
+
+            //ponerlo, okay ahora quiero ahcerlo solamente cuando suelte el drag, problema, el puto dragDrop no funciona >:c no funciona
+            
+        }
+
+        private void panteon_DropCompleted(UIElement sender, DropCompletedEventArgs args)
+        {
+            ListaPanteon[index] = (draggedItem as VMDios);
+        }
+
+        private void panteon_Drop(object sender, DragEventArgs e)
+        {
+
+            ListaPanteon[index] = (draggedItem as VMDios);
+        }
+
+        private void panteon_PointerMoved(object sender, PointerRoutedEventArgs e)
+        {
+            //if (index >= 0)
+            //{
+            //    ListaPanteon[index] = (draggedItem as VMDios);
+            //    index = -1;
+            //}
+        }
+
+        private void panteon_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            //if (index >= 0)
+            //{
+            //    ListaPanteon[index] = (draggedItem as VMDios);
+            //    index = -1;
+            //}
+        }
+
+        private void ContentGridView_DropCompleted(UIElement sender, DropCompletedEventArgs args)
+        {
+            //if (index >= 0)
+            //{
+            //    ListaPanteon[index] = (draggedItem as VMDios);
+            //    index = -1;
+            //}
+        }
+
+        private void ContentGridView_DragLeave(object sender, DragEventArgs e)
+        {
+            //if (index >= 0)
+            //{
+            //    ListaPanteon[index] = (draggedItem as VMDios);
+            //    index = -1;
+            //}
+        }
+
+        private void ContentGridView_DragItemsCompleted(ListViewBase sender, DragItemsCompletedEventArgs args)
+        {
+            if (index >= 0)
+            {
+                ListaPanteon[index] = (draggedItem as VMDios);
+                index = -1;
             }
         }
     }
