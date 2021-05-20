@@ -380,7 +380,10 @@
             
             <ListView Grid.Column="2" Grid.Row="1"  ItemsSource="{x:Bind ListaCatastrofes}"  Width="auto"
                   HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" SelectionMode="None" x:Name="CList"
+                      IsItemClickEnabled="True" ItemClick="CList_ItemClick" HighContrastAdjustment="None"
                       >
+                
+                
                       
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -388,8 +391,8 @@
                             Orientation="Horizontal"
                             Height="50"
                             BorderBrush="Purple"
+                            Background="#FFDC8CF3"
                             BorderThickness="2"
-                            PointerPressed="StackPanel_PointerPressed"
                             Margin="0,10">
                                 <Image Source="{Binding Imagen}"/>
                                 <StackPanel>

@@ -402,11 +402,19 @@ namespace Feed_The_Hades
             }
         }
 
-        private void StackPanel_PointerPressed(object sender, PointerRoutedEventArgs e)
-        {
 
-            CList.IsEnabled = false;
-            Mapa.IsEnabled = true;
+        private void CList_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            VMCatastrofe Item = e.ClickedItem as VMCatastrofe;
+
+            if (Item.Precio <= SOULS)
+            {
+                SOULS -= Item.Precio;
+                CList.IsEnabled = false;
+                Mapa.IsEnabled = true;
+            }
+
         }
+
     }
 }
