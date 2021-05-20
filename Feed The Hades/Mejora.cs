@@ -10,6 +10,7 @@ namespace Feed_The_Hades
     {
         public string iconGlyph { get; set; }
         public int level { get; set; }
+        public string precio { get; set; }
         public string text { get; set; }
         public int fontSize { get; set; }
         public bool isEnabled { get; set; }
@@ -33,7 +34,8 @@ namespace Feed_The_Hades
                 isEnabled = true,
                 iconMargin = "0,0,45,0",
                 levelMargin = "50,0,0,0",
-                name = "cerbero"
+                name = "cerbero",
+                precio = "1000 Almas"
             },
             new Mejora()
             {
@@ -44,7 +46,8 @@ namespace Feed_The_Hades
                 isEnabled = true,
                 iconMargin = "0,0,50,0",
                 levelMargin = "90,0,0,0",
-                name = "tanatos"
+                name = "tanatos",
+                precio = "5000 Almas"
             },
             new Mejora()
             {
@@ -55,7 +58,8 @@ namespace Feed_The_Hades
                 isEnabled = true,
                 iconMargin = "0,0,50,0",
                 levelMargin = "50,0,0,0",
-                name = "caronte"
+                name = "caronte",
+                precio = "50000 Almas"
             },
             new Mejora()
             {
@@ -66,7 +70,8 @@ namespace Feed_The_Hades
                 isEnabled = false,
                 iconMargin = "0,0,45,0",
                 levelMargin = "80,0,0,0",
-                name = "bancos"
+                name = "bancos",
+                precio = "100000 Almas"
             }
         };
 

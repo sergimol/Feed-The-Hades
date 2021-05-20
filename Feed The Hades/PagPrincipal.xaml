@@ -243,7 +243,10 @@
                                 <StackPanel Orientation="Horizontal">
                                     <FontIcon Glyph="{Binding iconGlyph}" Margin="{Binding iconMargin}" FontSize="{Binding fontSize}" HorizontalAlignment="Stretch" VerticalAlignment="Center"
                                     Foreground="#FFFFBFF5"/>
-                                    <TextBlock Text="{Binding text}" FontSize="{Binding fontSize}" Foreground="#FFFFBFF5"/>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding text}" FontSize="{Binding fontSize}" Foreground="#FFFFBFF5"/>
+                                        <TextBlock Text="{Binding precio}" FontSize="{Binding fontSize}" Foreground="#FFFFBFF5" HorizontalAlignment="Left"/>
+                                    </StackPanel>
                                     <TextBlock Text="{Binding level}" Margin="{Binding levelMargin}" FontSize="{Binding fontSize}" Foreground="#FFFFBFF5"/>
                                 </StackPanel>
                             </Button>

@@ -59,6 +59,7 @@ namespace Feed_The_Hades
             iconMargin = m.iconMargin;
             levelMargin = m.levelMargin;
             name = m.name;
+            precio = m.precio;
         }
     }
 }
