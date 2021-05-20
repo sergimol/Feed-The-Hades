@@ -152,6 +152,7 @@
     <Content Include="Assets\hadesBackground.jpg" />
     <Content Include="Assets\hadesIcon.png" />
     <Content Include="Assets\leomesi.png" />
+    <Content Include="Assets\mapamundi.jpg" />
     <Content Include="Assets\rombo.png" />
     <Content Include="Assets\song.mp3" />
     <Content Include="Assets\soulbutton.png" />
