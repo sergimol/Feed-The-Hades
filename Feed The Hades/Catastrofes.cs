@@ -30,7 +30,7 @@ namespace Feed_The_Hades
     public class Model
     {
         public static List<Catastrofe> Catastrofes = new List<Catastrofe>()
-    {
+        {
         new Catastrofe()
         {
             Id = 0,

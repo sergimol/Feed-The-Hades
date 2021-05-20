@@ -123,6 +123,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Catastrofes.cs" />
+    <Compile Include="Mejora.cs" />
     <Compile Include="PagPrincipal.xaml.cs">
       <DependentUpon>PagPrincipal.xaml</DependentUpon>
     </Compile>

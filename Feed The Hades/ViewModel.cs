@@ -38,5 +38,17 @@ namespace Feed_The_Hades
         }
     }
 
-    
+    public class VMMejora : Mejora
+    {
+        public VMMejora(Mejora m)
+        {
+            iconGlyph = m.iconGlyph;
+            level = m.level;
+            text = m.text;
+            fontSize = m.fontSize;
+            isEnabled = m.isEnabled;
+            iconMargin = m.iconMargin;
+            levelMargin = m.levelMargin;
+        }
+    }
 }

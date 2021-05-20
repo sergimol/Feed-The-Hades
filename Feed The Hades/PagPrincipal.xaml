@@ -211,38 +211,21 @@
 
 
                 <!--LISTA DE MEJORAS-->
-                <ListView  SelectionMode="None" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <Button x:Name="cerbero" Click="Button_Click" MinWidth="300" Margin="0,0,0,10" MinHeight="35" HorizontalContentAlignment="Center" 
-                    Background="#b370a5" BorderBrush="#FFFFBFF5" BorderThickness="4"
-                    Shadow="{StaticResource SharedShadow}">
-                        <StackPanel Orientation="Horizontal">
-                            <FontIcon Glyph="&#xED56;" Margin="0,0,45,0" FontSize="25" HorizontalAlignment="Stretch" VerticalAlignment="Center"
-                              Foreground="#FFFFBFF5"/>
-                            <TextBlock Text="Comida de Cerbero" FontSize="25" Foreground="#FFFFBFF5"/>
-                            <TextBlock Text="12" Margin="50,0,0,0" FontSize="25" Foreground="#FFFFBFF5"/>
-                        </StackPanel>
-                    </Button>
-                    <Button Click="Button_Click" MinWidth="383" MinHeight="35" Margin="0,0,0,10" HorizontalContentAlignment="Center">
-                        <StackPanel Orientation="Horizontal">
-                            <FontIcon Glyph="&#xEA92;" Margin="0,0,50,0" FontSize="25" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-                            <TextBlock Text="Hijos de Tánatos" FontSize="25" HorizontalAlignment="Stretch"/>
-                            <TextBlock Text="7" Margin="90,0,0,0" FontSize="25"/>
-                        </StackPanel>
-                    </Button>
-                    <Button Click="Button_Click" MinWidth="383" MinHeight="35" Margin="0,0,0,10">
-                        <StackPanel Orientation="Horizontal">
-                            <FontIcon Glyph="&#xEB48;" Margin="0,0,50,0" FontSize="25" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-                            <TextBlock Text="Puertos de Caronte" FontSize="25"/>
-                            <TextBlock Text="2" Margin="50,0,0,0" FontSize="25"/>
-                        </StackPanel>
-                    </Button>
-                    <Button Click="Button_Click" MinWidth="383" MinHeight="35" IsEnabled="False">
-                        <StackPanel Orientation="Horizontal">
-                            <FontIcon Glyph="&#xE825;" Margin="0,0,45,0" FontSize="25" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-                            <TextBlock Text="Bancos de Almas" FontSize="25"/>
-                            <TextBlock Text="0" Margin="80,0,0,0" FontSize="25"/>
-                        </StackPanel>
-                    </Button>
+                <ListView Margin="0,25,0,0" SelectionMode="None" VerticalAlignment="Center" HorizontalAlignment="Center" ItemsSource="{x:Bind ListaMejoras}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Button Click="Button_Click" MinWidth="383" Margin="0,0,0,10" MinHeight="35" HorizontalContentAlignment="Center" 
+                            Background="#b370a5" BorderBrush="#FFFFBFF5" BorderThickness="4" IsEnabled="{Binding isEnabled}"
+                            Shadow="{StaticResource SharedShadow}">
+                                <StackPanel Orientation="Horizontal">
+                                    <FontIcon Glyph="{Binding iconGlyph}" Margin="{Binding iconMargin}" FontSize="{Binding fontSize}" HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                                    Foreground="#FFFFBFF5"/>
+                                    <TextBlock Text="{Binding text}" FontSize="{Binding fontSize}" Foreground="#FFFFBFF5"/>
+                                    <TextBlock Text="{Binding level}" Margin="{Binding levelMargin}" FontSize="{Binding fontSize}" Foreground="#FFFFBFF5"/>
+                                </StackPanel>
+                            </Button>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
 
                 </ListView>
 
