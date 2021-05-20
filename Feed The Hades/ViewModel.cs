@@ -49,6 +49,7 @@ namespace Feed_The_Hades
             isEnabled = m.isEnabled;
             iconMargin = m.iconMargin;
             levelMargin = m.levelMargin;
+            name = m.name;
         }
     }
 }

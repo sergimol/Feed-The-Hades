@@ -214,7 +214,7 @@
                 <ListView Margin="0,25,0,0" SelectionMode="None" VerticalAlignment="Center" HorizontalAlignment="Center" ItemsSource="{x:Bind ListaMejoras}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <Button Click="Button_Click" MinWidth="383" Margin="0,0,0,10" MinHeight="35" HorizontalContentAlignment="Center" 
+                            <Button Click="Mejora_Click" MinWidth="383" Margin="0,0,0,10" MinHeight="35" HorizontalContentAlignment="Center" 
                             Background="#b370a5" BorderBrush="#FFFFBFF5" BorderThickness="4" IsEnabled="{Binding isEnabled}"
                             Shadow="{StaticResource SharedShadow}">
                                 <StackPanel Orientation="Horizontal">
@@ -248,12 +248,11 @@
                 </GridView>
             </ScrollViewer>
             <!--BARRA DE MUERTES-->
-            <ProgressBar Grid.Row="3" Grid.ColumnSpan="3" Height="100" Value="10" Background="#FFF19999" Foreground="Red">
+            <ProgressBar x:Name="deathBar" Grid.Row="3" Grid.ColumnSpan="3" Height="100" Value="10" Background="#FFF19999" Foreground="Red"/>
 
-            </ProgressBar>
             <StackPanel Grid.Row="3" Grid.ColumnSpan="3"  Orientation="Vertical" Padding="0,20,0,0">
                 <TextBlock Text="MUERTES TOTALES" FontSize="20" HorizontalAlignment="Center" />
-                <TextBlock Text="/7000000" FontSize="40" HorizontalAlignment="Center" />
+                <TextBlock x:Name="deathBarText" Text="/7000000" FontSize="40" HorizontalAlignment="Center" />
             </StackPanel>
 
 
@@ -314,7 +313,7 @@
 
                     <Rectangle Width="500" Height="300" Opacity="0.7" Fill="#8c649d" Stroke="#FFFFBFF5" StrokeThickness="5"/>
 
-                    <Button x:Name="nada" Click="Button_Click" MinWidth="300" Margin="10,10,0,10" MinHeight="35"
+                    <Button x:Name="nada" MinWidth="300" Margin="10,10,0,10" MinHeight="35"
                     HorizontalContentAlignment="Center" VerticalAlignment="Top"
                     Background="#b370a5" BorderBrush="#FFFFBFF5" BorderThickness="4" Opacity="0.7"
                     Shadow="{StaticResource SharedShadow}">
