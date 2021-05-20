@@ -38,6 +38,22 @@ namespace Feed_The_Hades
         int index = -1;
         int indexDios = -1;
 
+        int precioCerbero = 1000,
+            precioTanatos = 5000,
+            precioCaronte = 25000,
+            precioBancos = 500000;
+
+        float aumentoCerbero = 1.1f,
+            aumentoTanatos = 1.1f,
+            aumentoCaronte = 1.1f,
+            aumentoBancos = 1.1f;
+
+
+        int almasCerbero = 500,
+            almasTanatos = 1000,
+            almasCaronte = 5000,
+            almasBancos = 50000;
+
         object draggedItem;
 
         MediaPlayer song;
@@ -196,11 +212,32 @@ namespace Feed_The_Hades
         {
             StackPanel content = (StackPanel)(sender as Button).Content;
             UIElementCollection elements = content.Children;
-            TextBlock box = (TextBlock)elements[2];
-            string s = box.Text;
-            int i = int.Parse(s);
-            i++;
-            box.Text = i.ToString();
+           // StackPanel content2 = elements[1] as StackPanel).Children;
+            UIElementCollection elements2 = (elements[1] as StackPanel).Children;
+            TextBlock name2 = (TextBlock)elements2[0];
+
+            if (name2.Text == "Comida de Cerbero")
+            {
+                if (precioCerbero <= SOULS)
+                {
+                    SOULS -= precioCerbero;
+                    precioCerbero = (int)(precioCerbero * aumentoCerbero);
+                    aumentoCerbero += 0.1f;
+                    soulsPerSecond += almasCerbero;
+                    soulsPerClick += (int)almasCerbero / 10;
+
+
+                    TextBlock Precio = (TextBlock)elements2[1];
+                    Precio.Text = precioCerbero + " Almas";
+
+                    TextBlock nivel = (TextBlock)elements[2];
+                    string s = nivel.Text;
+                    int i = int.Parse(s);
+                    i++;
+                    nivel.Text = i.ToString();
+                }
+            }
+
         }
 
         private void shop_Click(object sender, RoutedEventArgs e)
