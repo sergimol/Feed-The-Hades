@@ -156,18 +156,7 @@ namespace Feed_The_Hades
         private void soul_Click(object sender, RoutedEventArgs e)
         {
             SOULS += soulsPerClick;
-            soulText.Text = SOULS.ToString() + " ALMAS";
-
-            if(DEATHS < 7000000000)
-            {
-                incomingKills = 100000000;
-                DEATHS += incomingKills;
-                deathBarText.Text = DEATHS.ToString() + "/7000000000";
-                deathBar.Value = DEATHS * 100 / 7000000000;
-            }
-            
-
-            
+            soulText.Text = SOULS.ToString() + " ALMAS";      
         }
 
         private void Mejora_Click(object sender, RoutedEventArgs e)
@@ -248,5 +237,25 @@ namespace Feed_The_Hades
             }
         }
         #endregion
+
+        private void Catastrofe_Click(object sender, RoutedEventArgs e)
+        {
+            CList.IsEnabled = false;
+            Mapa.IsEnabled = true;
+        }
+
+        private void Mapa_Click(object sender, RoutedEventArgs e)
+        {
+            CList.IsEnabled = true;
+            Mapa.IsEnabled = false;
+
+            if (DEATHS < 7000000000)
+            {
+                incomingKills = 1000000;
+                DEATHS += incomingKills;
+                deathBarText.Text = DEATHS.ToString() + "/7000000000";
+                deathBar.Value = DEATHS * 100 / 7000000000;
+            }
+        }
     }
 }
