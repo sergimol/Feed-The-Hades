@@ -346,6 +346,7 @@ namespace Feed_The_Hades
                 ListaPanteon[index] = (draggedItem as VMDios);
                 ListaDioses.Remove(draggedItem as VMDios);
                 index = -1;
+                indexDios = -1;
                 if (aux.Id != -1)
                 {
                     ListaDioses.Add(aux);
@@ -353,6 +354,55 @@ namespace Feed_The_Hades
             }
         }
 
+        private void ContentGridView_DragOver(object sender, DragEventArgs e)
+        {
+            //Find the position where item will be dropped in the gridview
 
+            Point pos = e.GetPosition(panteon.ItemsPanelRoot);
+
+
+
+            //Get the size of one of the gridview items
+
+            GridViewItem viewItem = (GridViewItem)panteon.ContainerFromIndex(0);
+
+
+
+            double itemHeight = viewItem.ActualHeight + viewItem.Margin.Top + viewItem.Margin.Bottom;
+
+            double itemWidth = viewItem.ActualWidth + viewItem.Margin.Left + viewItem.Margin.Right;
+
+
+
+            //Determine the index of the item from the item position (assumed all items are the same size)
+
+            indexDios = Math.Min(panteon.Items.Count - 1, (int)(pos.Y / itemHeight) * 4 + (int)(pos.X / itemWidth));
+
+
+            //ponerlo, okay ahora quiero ahcerlo solamente cuando suelte el drag, problema, el puto dragDrop no funciona >:c no funciona
+        }
+
+        private void panteon_DragItemsStarting(object sender, DragItemsStartingEventArgs e)
+        {
+            draggedItem = e.Items[0];
+        }
+
+        private void panteon_DragItemsCompleted(ListViewBase sender, DragItemsCompletedEventArgs args)
+        {
+            if (indexDios >= 0 && (draggedItem as VMDios).Id >= 0)
+            {
+                VMDios aux = ListaPanteon[indexDios];
+                ListaDioses.Add(draggedItem as VMDios);
+                ListaPanteon.Remove(draggedItem as VMDios);
+                VMDios VMDiosVacio = new VMDios(ModelDios.DiosTemplateVacio());
+                ListaPanteon.Add(VMDiosVacio);
+                index = -1;
+                indexDios = -1;
+                //if (aux.Id != -1)
+                //{
+                //    ListaDioses.Add(aux);
+                //}
+            }
+        }
     }
 }

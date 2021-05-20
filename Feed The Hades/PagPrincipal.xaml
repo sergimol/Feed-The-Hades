@@ -168,6 +168,9 @@
                           FlowDirection="LeftToRight"
                           DragOver="panteon_DragOver"
                               
+                              DragItemsStarting="panteon_DragItemsStarting"
+                              DragItemsCompleted="panteon_DragItemsCompleted"
+                              
                           ItemsSource="{x:Bind ListaPanteon}"
                               >
                         <GridView.ItemTemplate>
@@ -266,6 +269,8 @@
                           DragItemsStarting="ItemGridView_DragItemsStarting"
                           CanDrag="True"
                           DragItemsCompleted="ContentGridView_DragItemsCompleted"
+                          
+                          DragOver="ContentGridView_DragOver"
                           
                           >
                     <GridView.ItemTemplate>

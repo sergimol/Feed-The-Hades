@@ -156,6 +156,17 @@ namespace Feed_The_Hades
         {
             return Panteon[id];
         }
+
+        public static Dios DiosTemplateVacio()
+        {
+            return new Dios()
+            {
+                Id = -1,
+                Nombre = "Apollo",
+                Imagen = "/Assets/leomesi.png",
+            };
+        }
+
     }
 
 
