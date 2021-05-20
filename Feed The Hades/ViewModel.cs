@@ -17,12 +17,9 @@ namespace Feed_The_Hades
             Id = dron.Id;
             Nombre = dron.Nombre;
             Imagen = dron.Imagen;
-            Explicacion = dron.Explicacion;
-            Estado = dron.Estado;
-            X = dron.X;
-            Y = dron.Y;
-            RX = dron.RX;
-            RY = dron.RY;
+            Precio = dron.Precio;
+            PrecioText = dron.PrecioText;
+            Kills = dron.Kills;
             Img = new Image();
             string s = System.IO.Directory.GetCurrentDirectory() + "\\" + dron.Imagen;
             Img.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(s));

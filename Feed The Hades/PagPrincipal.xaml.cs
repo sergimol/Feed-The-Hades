@@ -180,13 +180,13 @@ namespace Feed_The_Hades
             SOULS += soulsPerClick;
             soulText.Text = SOULS.ToString() + " ALMAS";
 
-            if (DEATHS < 7000000000)
-            {
-                incomingKills = 100000000;
-                DEATHS += incomingKills;
-                deathBarText.Text = DEATHS.ToString() + "/7000000000";
-                deathBar.Value = DEATHS * 100 / 7000000000;
-            }
+            //if (DEATHS < 7000000000)
+            //{
+            //    incomingKills = 100000000;
+            //    DEATHS += incomingKills;
+            //    deathBarText.Text = DEATHS.ToString() + "/7000000000";
+            //    deathBar.Value = DEATHS * 100.0 / 7000000000.0;
+            //}
 
 
 
@@ -285,6 +285,8 @@ namespace Feed_The_Hades
 
         private void Catastrofe_Click(object sender, RoutedEventArgs e)
         {
+           // VMCatastrofe Item = e.ClickedItem as VMCatastrofe;
+
             CList.IsEnabled = false;
             Mapa.IsEnabled = true;
         }
@@ -299,7 +301,7 @@ namespace Feed_The_Hades
                 incomingKills = 1000000;
                 DEATHS += incomingKills;
                 deathBarText.Text = DEATHS.ToString() + "/7000000000";
-                deathBar.Value = DEATHS * 100 / 7000000000;
+                deathBar.Value = DEATHS * 100.0 / 7000000000.0;
             }
         }
 
@@ -391,17 +393,12 @@ namespace Feed_The_Hades
         {
             if (indexDios >= 0 && (draggedItem as VMDios).Id >= 0)
             {
-                VMDios aux = ListaPanteon[indexDios];
                 ListaDioses.Add(draggedItem as VMDios);
                 ListaPanteon.Remove(draggedItem as VMDios);
                 VMDios VMDiosVacio = new VMDios(ModelDios.DiosTemplateVacio());
                 ListaPanteon.Add(VMDiosVacio);
                 index = -1;
                 indexDios = -1;
-                //if (aux.Id != -1)
-                //{
-                //    ListaDioses.Add(aux);
-                //}
             }
         }
     }
