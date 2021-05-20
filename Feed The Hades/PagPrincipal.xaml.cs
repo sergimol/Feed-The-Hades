@@ -298,13 +298,17 @@ namespace Feed_The_Hades
 
             if (DEATHS < 7000000000)
             {
-                incomingKills = 1000000;
-                DEATHS += incomingKills;
+                int x = (int)(incomingKills *GetRandomNumber(0.8,2));
+                DEATHS += x;
                 deathBarText.Text = DEATHS.ToString() + "/7000000000";
                 deathBar.Value = DEATHS * 100.0 / 7000000000.0;
             }
         }
-
+        public double GetRandomNumber(double minimum, double maximum)
+        {
+            Random random = new Random();
+            return random.NextDouble() * (maximum - minimum) + minimum;
+        }
         private void ItemGridView_DragItemsStarting(object sender, DragItemsStartingEventArgs e)
 
         {
@@ -410,6 +414,7 @@ namespace Feed_The_Hades
             if (Item.Precio <= SOULS)
             {
                 SOULS -= Item.Precio;
+                incomingKills = Item.Kills;
                 CList.IsEnabled = false;
                 Mapa.IsEnabled = true;
             }
