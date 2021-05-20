@@ -299,20 +299,82 @@
             <!--La tierra-->
 
             <!--<Image  Source="Assets/MAPON.jpg" Grid.Column="2"   Grid.Row="1" Grid.RowSpan="2"  Stretch="Fill" />-->
-            <ScrollViewer Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" ZoomMode="Enabled" HorizontalScrollMode="Enabled" VerticalScrollMode="Disabled" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled">
-                <Image Source="Assets/mapamundi.jpg"  Stretch="Fill" Opacity="0.8"/>
+            <ScrollViewer x:Name="Mapa" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" ZoomMode="Enabled" HorizontalScrollMode="Enabled" VerticalScrollMode="Disabled" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled" IsEnabled="False" >
+                <Grid>
+                    <Image Source="Assets/mapamundi.jpg"  Stretch="Fill" Opacity="0.8"/>
+                    <Button Click="Mapa_Click"  Margin="5,141,0,0" VerticalAlignment="Top" Height="239" Width="330" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Visibility="Visible" Opacity="0.7">
+                        <Button.RenderTransform>
+                            <CompositeTransform SkewY="-23.039" TranslateY="-90.045"/>
+                        </Button.RenderTransform>
+                    </Button>
+                    <Button Click="Mapa_Click" Margin="67,344,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Width="106" Height="46">
+                        <Button.RenderTransform>
+                            <CompositeTransform SkewY="33.328" TranslateY="24.5"/>
+                        </Button.RenderTransform>
+                    </Button>
+                    <Button Click="Mapa_Click" Margin="159,430,0,0" VerticalAlignment="Top" Height="172" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Width="224">
+                        <Button.RenderTransform>
+                            <CompositeTransform SkewX="0" TranslateX="15.995" ScaleX="0.942" ScaleY="1.021" SkewY="32.643" TranslateY="29.555"/>
+                        </Button.RenderTransform>
+                    </Button>
+                    <Button Click="Mapa_Click" Margin="232,612,0,0" VerticalAlignment="Top" Height="166" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Width="64">
+                        <Button.RenderTransform>
+                            <CompositeTransform SkewY="31.207" TranslateY="18.746"/>
+                        </Button.RenderTransform>
+                    </Button>
+                    <Button Click="Mapa_Click" Margin="420,11,0,0" VerticalAlignment="Top" Width="81" Height="85" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                        <Button.RenderTransform>
+                            <CompositeTransform SkewX="-33.924" TranslateX="-22.818" ScaleX="1.101" ScaleY="1.162" SkewY="2.673" TranslateY="9.375"/>
+                        </Button.RenderTransform>
+                    </Button>
+                    <Button Click="Mapa_Click" Margin="539,222,0,0" VerticalAlignment="Top" Height="38" Width="48"/>
+                    <Button Click="Mapa_Click" Margin="610,33,0,0" VerticalAlignment="Top" Width="100" Height="102" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                        <Button.RenderTransform>
+                            <CompositeTransform SkewY="-29.692" TranslateY="64.104" ScaleX="1.351" ScaleY="0.826" SkewX="18.656" TranslateX="-20.753"/>
+                        </Button.RenderTransform>
+                    </Button>
+                    <Button Click="Mapa_Click" Margin="649,289,0,0" VerticalAlignment="Top" Height="362" Width="147" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                        <Button.RenderTransform>
+                            <CompositeTransform SkewX="4.995" TranslateX="-15.381"/>
+                        </Button.RenderTransform>
+                    </Button>
+                    <Button Click="Mapa_Click" Margin="511,286,0,0" VerticalAlignment="Top" Width="110" Height="158"/>
+                    <Button Click="Mapa_Click" Margin="652,189,0,0" VerticalAlignment="Top" Height="66" Width="90" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                        <Button.RenderTransform>
+                            <CompositeTransform SkewY="-27.52" TranslateY="-16.412" Rotation="-11.422"/>
+                        </Button.RenderTransform>
+                    </Button>
+                    <Button Click="Mapa_Click" Margin="728,59,0,0" VerticalAlignment="Top" Width="522" Height="115"/>
+                    <Button Click="Mapa_Click" Margin="773,259,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="96" UseLayoutRounding="False" d:LayoutRounding="Auto" Width="96">
+                        <Button.RenderTransform>
+                            <CompositeTransform SkewY="43.757" TranslateY="19.645" ScaleX="1" ScaleY="0.6" SkewX="-34.801" TranslateX="-10.446" Rotation="6.962"/>
+                        </Button.RenderTransform>
+                    </Button>
+                    <Button Click="Mapa_Click" Margin="748,176,0,0" VerticalAlignment="Top" Width="251" Height="126"/>
+                    <Button Click="Mapa_Click" Margin="1034,185,0,0" VerticalAlignment="Top" Width="160" Height="198"/>
+                    <Button Click="Mapa_Click" Margin="961,307,0,0" VerticalAlignment="Top" Height="94" Width="60"/>
+                    <Button Click="Mapa_Click" Margin="1160,514,0,0" VerticalAlignment="Top" Width="169" Height="132" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                        <Button.RenderTransform>
+                            <CompositeTransform SkewY="14.178" TranslateY="52.819"/>
+                        </Button.RenderTransform>
+                    </Button>
+                    <Button Click="Mapa_Click" Margin="1084,426,0,0" VerticalAlignment="Top" Width="239" Height="105"/>
+                </Grid>
             </ScrollViewer>
+            
             <ListView Grid.Column="2" Grid.Row="1"  ItemsSource="{x:Bind ListaCatastrofes}"  Width="auto"
-                  HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" IsItemClickEnabled="True" >
+                  HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" SelectionMode="None" x:Name="CList">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel
-                        Orientation="Horizontal"
-                        Height="50">
-                            <TextBlock Text="{Binding Id}"/>
-                            <Image Source="{Binding Imagen}"/>
-                            <TextBlock Text="{Binding Nombre}"/>
-                        </StackPanel>
+                        <Button Click="Catastrofe_Click" MinWidth="150">
+                            <StackPanel
+                            Orientation="Horizontal"
+                            Height="50">
+                                <TextBlock Text="{Binding Id}"/>
+                                <Image Source="{Binding Imagen}"/>
+                                <TextBlock Text="{Binding Nombre}"/>
+                            </StackPanel>
+                        </Button>
                     </DataTemplate>
                 </ListView.ItemTemplate>
 
@@ -397,6 +459,7 @@
 
                 </Grid>
             </Popup>
+
 
         </Grid>
     </Viewbox>
