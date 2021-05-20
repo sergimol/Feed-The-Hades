@@ -167,6 +167,7 @@
                           SelectionMode="None"
                           FlowDirection="LeftToRight"
                           DragOver="panteon_DragOver"
+                              
                           DropCompleted="panteon_DropCompleted"
                           Drop="panteon_Drop"
                               

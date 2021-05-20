@@ -34,7 +34,9 @@ namespace Feed_The_Hades
         int SOULS;
         int soulsPerSecond = 100;
         int soulsPerClick = 10;
+
         int index = -1;
+        int indexDios = -1;
 
         object draggedItem;
 
@@ -245,7 +247,13 @@ namespace Feed_The_Hades
         private void UpdateTimer_Tick(object sender, object e)
         {
             UpdateSouls();
+            UpdateIndex();
 
+        }
+
+        private void UpdateIndex()
+        {
+            index = -1;
         }
 
         //Updatea las almas 
@@ -297,9 +305,8 @@ namespace Feed_The_Hades
         private void ItemGridView_DragItemsStarting(object sender, DragItemsStartingEventArgs e)
 
         {
-
             draggedItem = e.Items[0];
-
+            
         }
 
 
@@ -422,9 +429,26 @@ namespace Feed_The_Hades
         {
             if (index >= 0)
             {
+                VMDios aux = ListaPanteon[index];
                 ListaPanteon[index] = (draggedItem as VMDios);
+                ListaDioses.Remove(draggedItem as VMDios);
                 index = -1;
+                if (aux.Id != -1)
+                {
+                    ListaDioses.Add(aux);
+                }
             }
+        }
+
+
+        private void panteon_DragLeave(object sender, DragEventArgs e)
+        {
+            index = -1;
+        }
+
+        private void panteon_FocusDisengaged(Control sender, FocusDisengagedEventArgs args)
+        {
+            index = -1;
         }
     }
 }
