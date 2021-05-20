@@ -6,6 +6,8 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Media.Core;
+using Windows.Media.Playback;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -31,10 +33,41 @@ namespace Feed_The_Hades
         int SOULS;
         int soulsPerSecond = 100;
         int soulsPerClick = 10;
+
+        MediaPlayer song;
+
         public PagPrincipal()
         {
             this.InitializeComponent();
+
+
+            //Activar sonido
+            ElementSoundPlayer.State = ElementSoundPlayerState.On;
+            //Activar musica
+            song = new MediaPlayer();
         }
+        private async void playSong()
+        {
+            Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
+            Windows.Storage.StorageFile file = await folder.GetFileAsync("song.mp3");
+            song.Source = MediaSource.CreateFromStorageFile(file);
+            song.Volume = 0.1f;
+            song.AutoPlay = true;
+        }
+        void changeMusicVolume(object sender, RoutedEventArgs e)
+        {
+            Slider w = sender as Slider;
+            if (song != null)
+                song.Volume = w.Value / 500;
+        }
+
+        void changeFXVolume(object sender, RoutedEventArgs e)
+        {
+            Slider w = sender as Slider;
+            if (song != null)
+                ElementSoundPlayer.Volume = w.Value / 100;
+        }
+
         public ObservableCollection<VMCatastrofe> ListaCatastrofes { get; } = new ObservableCollection<VMCatastrofe>();
         public ObservableCollection<VMMejora> ListaMejoras { get; } = new ObservableCollection<VMMejora>();
 
@@ -42,7 +75,7 @@ namespace Feed_The_Hades
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-
+            playSong();
             //SharedShadow.Receivers.Add(purpleRect);
             //SharedShadow.Receivers.Add(hadesBack);
 
@@ -66,7 +99,7 @@ namespace Feed_The_Hades
                     ListaCatastrofes.Add(VMitem);
                 }
 
-            if(ListaMejoras != null)
+            if (ListaMejoras != null)
                 foreach (Mejora mejora in MejoraModel.GetAllMejoras())
                 {
                     VMMejora vMMejora = new VMMejora(mejora);
@@ -83,6 +116,8 @@ namespace Feed_The_Hades
 
             UpdateTimerSetup();
         }
+
+
 
         //#region goBack 
         //private void Back_Click(object sender, RoutedEventArgs e)
@@ -112,10 +147,10 @@ namespace Feed_The_Hades
         }
         private void soul_Click(object sender, RoutedEventArgs e)
         {
-            SOULS+=soulsPerClick;
+            SOULS += soulsPerClick;
             soulText.Text = SOULS.ToString() + " ALMAS";
 
-            
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -141,6 +176,17 @@ namespace Feed_The_Hades
             exitPopUp.IsOpen = false;
         }
 
+
+        private void enterConfig_Click(object sender, RoutedEventArgs e)
+        {
+            configPopUp.IsOpen = true;
+        }
+
+        private void exitConfig_Click(object sender, RoutedEventArgs e)
+        {
+            configPopUp.IsOpen = false;
+        }
+
         //Timer para la actualizacion del juego
         public void UpdateTimerSetup()
         {
@@ -162,7 +208,22 @@ namespace Feed_The_Hades
         private void UpdateSouls()
         {
             SOULS += soulsPerSecond;
-            soulText.Text = SOULS.ToString() +  " ALMAS";
+            soulText.Text = SOULS.ToString() + " ALMAS";
         }
+
+        #region sound
+        private void soundToggle_Toggled(object sender, RoutedEventArgs e)
+        {
+            if (soundToggle.IsOn == true)
+            {
+                ElementSoundPlayer.State = ElementSoundPlayerState.On;
+            }
+            else
+            {
+                ElementSoundPlayer.State = ElementSoundPlayerState.Off;
+                ElementSoundPlayer.SpatialAudioMode = ElementSpatialAudioMode.Off;
+            }
+        }
+        #endregion
     }
 }

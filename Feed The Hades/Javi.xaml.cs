@@ -5,6 +5,8 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Media.Core;
+using Windows.Media.Playback;
 using Windows.System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -26,10 +28,15 @@ namespace Feed_The_Hades
         public Javi()
         {
             this.InitializeComponent();
+          
         }
+
+        
+
         //Click play
         private void playButton_Click(object sender, RoutedEventArgs e)
         {
+           
             this.Frame.Navigate(typeof(PagPrincipal));
         }
         //Click config

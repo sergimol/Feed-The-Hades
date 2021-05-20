@@ -153,6 +153,7 @@
     <Content Include="Assets\hadesIcon.png" />
     <Content Include="Assets\leomesi.png" />
     <Content Include="Assets\rombo.png" />
+    <Content Include="Assets\song.mp3" />
     <Content Include="Assets\soulbutton.png" />
     <Content Include="Assets\MAPON.jpg" />
     <Content Include="Assets\TIRRA.png" />

@@ -249,18 +249,18 @@
             </ScrollViewer>
             <!--BARRA DE MUERTES-->
             <ProgressBar Grid.Row="3" Grid.ColumnSpan="3" Height="100" Value="10" Background="#FFF19999" Foreground="Red">
-                
+
             </ProgressBar>
             <StackPanel Grid.Row="3" Grid.ColumnSpan="3"  Orientation="Vertical" Padding="0,20,0,0">
                 <TextBlock Text="MUERTES TOTALES" FontSize="20" HorizontalAlignment="Center" />
                 <TextBlock Text="/7000000" FontSize="40" HorizontalAlignment="Center" />
             </StackPanel>
-            
-            
+
+
             <!--AJUSTES DE CONFIG Y EXIT-->
             <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Vertical">
 
-                <AppBarButton Icon="Setting" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Bottom"  BorderBrush="#FF363636" BorderThickness="5" Height="50" Background="#FF746666"/>
+                <AppBarButton Icon="Setting" Foreground="White" Click="enterConfig_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"  BorderBrush="#FF363636" BorderThickness="5" Height="50" Background="#FF746666"/>
                 <AppBarButton Icon="Cancel" Foreground="White" Click="exitButton_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"  BorderBrush="#FF740B0B" BorderThickness="5" Height="50" Background="#FF871919"/>
 
             </StackPanel>
@@ -343,16 +343,40 @@
                             <Button x:Name="noExit" Content="NO" Click="noExit_Click" Width="50" Height="50"
                                     Foreground="White"></Button>
                         </StackPanel>
-                        
+
                     </StackPanel>
 
-                    
+
                 </Grid>
             </Popup>
 
 
+            <!--POP UP DEL MENU DE OPCIONES-->
+            <Popup x:Name="configPopUp" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" IsOpen="False" IsLightDismissEnabled="True">
+            <Grid Margin="220,350,0,0" Width="500" Height="500" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2">
 
+                    <Rectangle Width="500" Height="600" Opacity="0.7" Fill="#FF3A2C2C" Stroke="#FF3C3434" StrokeThickness="5"/>
 
-        </Grid> 
+                    <TextBlock Text="Configuración" FontSize="30" Foreground="White" 
+                                   VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20"></TextBlock>
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <AppBarButton  x:Name="exitConfig" Icon="Back" Click="exitConfig_Click" Foreground="White" Background="#66515050" />
+                    </StackPanel>
+
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                        <ToggleSwitch x:Name="soundToggle" IsOn="True" OffContent="Sonido desactivado" OnContent="Sonido activado" Toggled="soundToggle_Toggled"  Margin="0,0,0,20" FocusVisualPrimaryBrush="White" Foreground="White"/>
+
+                        <TextBlock Text="Volumen música" FontSize="20" Foreground="White"  HorizontalAlignment="Left"/>
+                        <Slider AutomationProperties.Name="simple slider" Width="200"  Margin="0,0,0,20" Value="50" ValueChanged="changeMusicVolume"/>
+
+                        <TextBlock Text="Volumen sonido" FontSize="20" Foreground="White"  HorizontalAlignment="Left" />
+                        <Slider AutomationProperties.Name="simple slider" Width="200"  Margin="0,0,0,20" Value="50" ValueChanged="changeFXVolume"/>
+                    </StackPanel>
+
+                </Grid>
+            </Popup>
+
+        </Grid>
     </Viewbox>
 </Page>
