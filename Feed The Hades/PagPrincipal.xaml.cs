@@ -401,5 +401,12 @@ namespace Feed_The_Hades
                 indexDios = -1;
             }
         }
+
+        private void StackPanel_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+
+            CList.IsEnabled = false;
+            Mapa.IsEnabled = true;
+        }
     }
 }
