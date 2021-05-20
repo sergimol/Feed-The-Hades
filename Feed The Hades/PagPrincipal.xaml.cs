@@ -158,16 +158,16 @@ namespace Feed_The_Hades
             SOULS += soulsPerClick;
             soulText.Text = SOULS.ToString() + " ALMAS";
 
-            if(DEATHS < 7000000000)
+            if (DEATHS < 7000000000)
             {
                 incomingKills = 100000000;
                 DEATHS += incomingKills;
                 deathBarText.Text = DEATHS.ToString() + "/7000000000";
                 deathBar.Value = DEATHS * 100 / 7000000000;
             }
-            
 
-            
+
+
         }
 
         private void Mejora_Click(object sender, RoutedEventArgs e)
@@ -191,6 +191,7 @@ namespace Feed_The_Hades
         {
             //carga la pagina 2 y ademas pasa el dato del nombre
             this.Frame.Navigate(typeof(Javi));
+            song.Pause();
             //Application.Current.Exit();
         }
 
@@ -240,9 +241,13 @@ namespace Feed_The_Hades
             if (soundToggle.IsOn == true)
             {
                 ElementSoundPlayer.State = ElementSoundPlayerState.On;
+                if (song != null)
+                    song.Play();
             }
             else
             {
+                if (song != null)
+                    song.Pause();
                 ElementSoundPlayer.State = ElementSoundPlayerState.Off;
                 ElementSoundPlayer.SpatialAudioMode = ElementSpatialAudioMode.Off;
             }

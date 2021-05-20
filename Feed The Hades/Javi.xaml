@@ -9,8 +9,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="#FFAD9FCB">
+        <Image x:Name="hadesBack" Source="Assets/hadesBackground.jpg" Opacity="0.5" Stretch="UniformToFill"/>
 
         <Viewbox Stretch="Uniform" StretchDirection="Both">
+
 
             <StackPanel x:Name="Panel"
                     Orientation="Vertical"
@@ -18,7 +20,7 @@
                     VerticalAlignment="Top"
                     Padding="40,40,40,0" 
                     Margin="0,80,0,0"
-                    Background="#33FFFFFF"
+                    Background="#FFAF9AC3"
                     KeyDown="Panel_Navigation"
                     >
 
@@ -32,7 +34,7 @@
                     Orientation="Vertical"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
-                     Background="#99630808"
+                     Background="#99630808" FocusVisualSecondaryBrush="#99000000" BorderBrush="#FF3C0505" BorderThickness="10"
                      >
                     <TextBlock
                 FontSize="80"
@@ -50,8 +52,9 @@
                 Click="playButton_Click"
                 ToolTipService.ToolTip="Click para crear nueva partida"
                 IsTabStop="True"
+                BorderThickness="5"
                     
-                UseSystemFocusVisuals="True">
+                UseSystemFocusVisuals="True" Background="#FFEFACFF" BorderBrush="#FF8E40A4">
 
                     <Button.KeyboardAccelerators>
                         <KeyboardAccelerator Modifiers="Control" Key="J"/>
@@ -67,8 +70,8 @@
                 Click="playButton_Click"
                 ToolTipService.ToolTip="Click para crear nueva partida"          
                 IsTabStop="True"
-                UseSystemFocusVisuals="True"
-                >
+                UseSystemFocusVisuals="True" Background="#FFEFACFF" BorderBrush="#FF8E40A4"
+                BorderThickness="5">
                 </Button>
                 <!--Boton 3-->
                 <Button x:Name="configButton2"
@@ -80,7 +83,8 @@
                 Click="playButton_Click"    
                 ToolTipService.ToolTip="Click para crear nueva partida"          
                 IsTabStop="True"
-                UseSystemFocusVisuals="True">
+                UseSystemFocusVisuals="True" Background="#FFEFACFF" BorderBrush="#FF8E40A4"
+                 BorderThickness="5">
                 </Button>
                 <StackPanel
             VerticalAlignment="Bottom"
