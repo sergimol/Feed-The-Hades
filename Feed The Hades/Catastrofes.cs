@@ -26,7 +26,7 @@ namespace Feed_The_Hades
 
 
 
-   
+
     public class Model
     {
         public static List<Catastrofe> Catastrofes = new List<Catastrofe>()
@@ -69,18 +69,66 @@ namespace Feed_The_Hades
             }
 
         };
-
-
         public static IList<Catastrofe> GetAllCatastrofes()
         {
             return Catastrofes;
         }
-
         public static Catastrofe GetCatastrofeById(int id)
         {
             return Catastrofes[id];
         }
+
+
     }
+
+
+    public class Dios
+    {
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public string Imagen { get; set; }
+
+    }
+
+    public class ModelDios
+    {
+        public static List<Dios> Dioses = new List<Dios>()
+        {
+            new Dios()
+            {
+                Id = 0,
+                Nombre = "Apollo",
+                Imagen = "/Assets/eltio.png",
+            },new Dios()
+            {
+                Id = 1,
+                Nombre = "Apollo",
+                Imagen = "/Assets/eltio.png",
+            },new Dios()
+            {
+                Id = 2,
+                Nombre = "Apollo",
+                Imagen = "/Assets/eltio.png",
+            },new Dios()
+            {
+                Id = 3,
+                Nombre = "Apollo",
+                Imagen = "/Assets/eltio.png",
+            }
+        };
+
+        public static IList<Dios> GetAllDioses()
+        {
+            return Dioses;
+        }
+        public static Dios GetDiosById(int id)
+        {
+            return Dioses[id];
+        }
+    }
+
+
+
 }
 
 

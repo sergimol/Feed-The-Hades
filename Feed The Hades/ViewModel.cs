@@ -36,6 +36,17 @@ namespace Feed_The_Hades
             //Mapa.Children.Last().SetValue(Canvas.LeftProperty, X - 25);
             //Mapa.Children.Last().SetValue(Canvas.TopProperty, Y - 25);
         }
+
+    }
+
+    public class VMDios : Dios
+    {
+        public VMDios(Dios d)
+        {
+            Id = d.Id;
+            Nombre = d.Nombre;
+            Imagen = d.Imagen;
+        }
     }
 
     public class VMMejora : Mejora

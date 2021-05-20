@@ -166,7 +166,7 @@
                           SelectionMode="Single"
                           FlowDirection="LeftToRight">
 
-                        <Image Source="/Assets/eltio.png" Width="100" Height="150" />
+                        <Image Source="/Assets/alexcalvo.png" Width="100" Height="150" />
                         <Image Source="/Assets/eltio.png" Width="150" Height="150" />
                         <Image Source="/Assets/eltio.png" Width="150" Height="150" />
 
@@ -251,20 +251,20 @@
                           IsItemClickEnabled="False"
                           CanDragItems="True"
                           AllowDrop="True"
-                          CanReorderItems="True"
+                          CanReorderItems="False"
                           SelectionMode="Single"
 
-                          FlowDirection="LeftToRight">
-                    <Image Source="/Assets/eltio.png" Width="150" Height="150" Margin="20, 20,20,20"/>
-                    <Image Source="/Assets/eltio.png" Width="150" Height="150" Margin="20, 20,20,20"/>
-                    <Image Source="/Assets/eltio.png" Width="150" Height="150" Margin="20, 20,20,20"/>
-                    <Image Source="/Assets/eltio.png" Width="150" Height="150" Margin="20, 20,20,20"/>
-                    <Image Source="/Assets/eltio.png" Width="150" Height="150" Margin="20, 20,20,20"/>
-                    <Image Source="/Assets/eltio.png" Width="150" Height="150" Margin="20, 20,20,20"/>
-                    <Image Source="/Assets/eltio.png" Width="150" Height="150" Margin="20, 20,20,20"/>
-                    <Image Source="/Assets/eltio.png" Width="150" Height="150" Margin="20, 20,20,20"/>
-                    <Image Source="/Assets/eltio.png" Width="150" Height="150" Margin="20, 20,20,20"/>
-                    <Image Source="/Assets/eltio.png" Width="150" Height="150" Margin="20, 20,20,20"/>
+                          FlowDirection="LeftToRight"
+                          ItemsSource="{x:Bind ListaDioses}"
+                          
+                          >
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Imagen}" Width="100" Height="150" Margin="20, 20,20,20"/>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+
+
                 </GridView>
             </ScrollViewer>
             <!--BARRA DE MUERTES-->

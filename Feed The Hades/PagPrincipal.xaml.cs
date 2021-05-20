@@ -74,6 +74,7 @@ namespace Feed_The_Hades
 
         public ObservableCollection<VMCatastrofe> ListaCatastrofes { get; } = new ObservableCollection<VMCatastrofe>();
         public ObservableCollection<VMMejora> ListaMejoras { get; } = new ObservableCollection<VMMejora>();
+        public ObservableCollection<VMDios> ListaDioses { get; } = new ObservableCollection<VMDios>();
 
 
 
@@ -112,6 +113,13 @@ namespace Feed_The_Hades
                 {
                     VMMejora vMMejora = new VMMejora(mejora);
                     ListaMejoras.Add(vMMejora);
+                }
+            
+            if (ListaDioses != null)
+                foreach (Dios dios in ModelDios.GetAllDioses())
+                {
+                    VMDios VMDios = new VMDios(dios);
+                    ListaDioses.Add(VMDios);
                 }
 
             //Control de la vuelta atras
