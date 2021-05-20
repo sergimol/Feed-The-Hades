@@ -28,7 +28,7 @@ namespace Feed_The_Hades
             new Mejora()
             {
                 iconGlyph = "\uED56",
-                level = 12,
+                level = 0,
                 text = "Comida de Cerbero",
                 fontSize = 25,
                 isEnabled = true,
@@ -40,7 +40,7 @@ namespace Feed_The_Hades
             new Mejora()
             {
                 iconGlyph = "\uEA92",
-                level = 7,
+                level = 0,
                 text = "Hijos de Tánatos",
                 fontSize = 25,
                 isEnabled = true,
@@ -52,7 +52,7 @@ namespace Feed_The_Hades
             new Mejora()
             {
                 iconGlyph = "\uEB48",
-                level = 2,
+                level = 0,
                 text = "Puertos de Caronte",
                 fontSize = 25,
                 isEnabled = true,
@@ -67,7 +67,7 @@ namespace Feed_The_Hades
                 level = 0,
                 text = "Bancos de Almas",
                 fontSize = 25,
-                isEnabled = false,
+                isEnabled = true,
                 iconMargin = "0,0,45,0",
                 levelMargin = "80,0,0,0",
                 name = "bancos",

@@ -211,32 +211,192 @@ namespace Feed_The_Hades
         private void Mejora_Click(object sender, RoutedEventArgs e)
         {
             StackPanel content = (StackPanel)(sender as Button).Content;
+
             UIElementCollection elements = content.Children;
-           // StackPanel content2 = elements[1] as StackPanel).Children;
+
+            // StackPanel content2 = elements[1] as StackPanel).Children;
+
             UIElementCollection elements2 = (elements[1] as StackPanel).Children;
+
             TextBlock name2 = (TextBlock)elements2[0];
 
+
+
             if (name2.Text == "Comida de Cerbero")
+
             {
+
                 if (precioCerbero <= SOULS)
+
                 {
+
                     SOULS -= precioCerbero;
+
                     precioCerbero = (int)(precioCerbero * aumentoCerbero);
+
                     aumentoCerbero += 0.1f;
+
                     soulsPerSecond += almasCerbero;
+
                     soulsPerClick += (int)almasCerbero / 10;
 
 
+
+
+
                     TextBlock Precio = (TextBlock)elements2[1];
+
                     Precio.Text = precioCerbero + " Almas";
 
+
+
                     TextBlock nivel = (TextBlock)elements[2];
+
                     string s = nivel.Text;
+
                     int i = int.Parse(s);
+
                     i++;
+
                     nivel.Text = i.ToString();
+
                 }
+
             }
+
+            if (name2.Text == "Hijos de Tánatos")
+
+            {
+
+                if (precioTanatos <= SOULS)
+
+                {
+
+                    SOULS -= precioTanatos;
+
+                    precioTanatos = (int)(precioTanatos * aumentoTanatos);
+
+                    aumentoTanatos += 0.1f;
+
+                    soulsPerSecond += almasTanatos;
+
+                    soulsPerClick += (int)almasTanatos / 10;
+
+
+
+
+
+                    TextBlock Precio = (TextBlock)elements2[1];
+
+                    Precio.Text = precioTanatos + " Almas";
+
+
+
+                    TextBlock nivel = (TextBlock)elements[2];
+
+                    string s = nivel.Text;
+
+                    int i = int.Parse(s);
+
+                    i++;
+
+                    nivel.Text = i.ToString();
+
+                }
+
+            }
+
+            if (name2.Text == "Puertos de Caronte")
+
+            {
+
+                if (precioCaronte <= SOULS)
+
+                {
+
+                    SOULS -= precioCaronte;
+
+                    precioCaronte = (int)(precioCaronte * aumentoCaronte);
+
+                    aumentoCaronte += 0.1f;
+
+                    soulsPerSecond += almasCaronte;
+
+                    soulsPerClick += (int)almasCaronte / 10;
+
+
+
+
+
+                    TextBlock Precio = (TextBlock)elements2[1];
+
+                    Precio.Text = precioCaronte + " Almas";
+
+
+
+                    TextBlock nivel = (TextBlock)elements[2];
+
+                    string s = nivel.Text;
+
+                    int i = int.Parse(s);
+
+                    i++;
+
+                    nivel.Text = i.ToString();
+
+                }
+
+            }
+
+            if (name2.Text == "Bancos de Almas")
+
+            {
+
+                if (precioBancos <= SOULS)
+
+                {
+
+                    SOULS -= precioBancos;
+
+                    precioBancos = (int)(precioBancos * aumentoBancos);
+
+                    aumentoBancos += 0.1f;
+
+                    soulsPerSecond += almasBancos;
+
+                    soulsPerClick += (int)almasBancos / 10;
+
+
+
+
+
+                    TextBlock Precio = (TextBlock)elements2[1];
+
+                    Precio.Text = precioBancos + " Almas";
+
+
+
+                    TextBlock nivel = (TextBlock)elements[2];
+
+                    string s = nivel.Text;
+
+                    int i = int.Parse(s);
+
+                    i++;
+
+                    nivel.Text = i.ToString();
+
+                }
+
+            }
+
+
+
+
+
+            IndicadorDeAlmasTexto.Text = soulsPerSecond + " ALMAS/S";
+
+
 
         }
 
