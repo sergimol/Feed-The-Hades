@@ -379,8 +379,7 @@
             </ScrollViewer>
             
             <ListView Grid.Column="2" Grid.Row="1"  ItemsSource="{x:Bind ListaCatastrofes}"  Width="auto"
-                  HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" SelectionMode="None" x:Name="CList"
-                      PointerMoved="CList_PointerMoved">
+                  HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" SelectionMode="None" x:Name="CList">
                       
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -389,8 +388,11 @@
                             Orientation="Horizontal"
                             Height="50">
                                 <Image Source="{Binding Imagen}"/>
-                                <TextBlock Text="{Binding Nombre}" VerticalAlignment="Top"/>
-                                <TextBlock Text="{Binding PrecioText}"  VerticalAlignment="Bottom"/>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Nombre}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                                    <TextBlock Text="{Binding PrecioText}"  VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+                                </StackPanel>
+                                
                             </StackPanel>
                         </Button>
                     </DataTemplate>
