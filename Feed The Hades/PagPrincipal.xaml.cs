@@ -118,9 +118,15 @@ namespace Feed_The_Hades
             
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Mejora_Click(object sender, RoutedEventArgs e)
         {
-
+            StackPanel content = (StackPanel)(sender as Button).Content;
+            UIElementCollection elements = content.Children;
+            TextBlock box = (TextBlock)elements[2];
+            string s = box.Text;
+            int i = int.Parse(s);
+            i++;
+            box.Text = i.ToString();
         }
         #endregion
 

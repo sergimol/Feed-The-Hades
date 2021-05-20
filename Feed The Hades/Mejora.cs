@@ -15,6 +15,7 @@ namespace Feed_The_Hades
         public bool isEnabled { get; set; }
         public string iconMargin { get; set; }
         public string levelMargin { get; set; }
+        public string name { get; set; }
 
         public Mejora() { }
     }
@@ -31,7 +32,8 @@ namespace Feed_The_Hades
                 fontSize = 25,
                 isEnabled = true,
                 iconMargin = "0,0,45,0",
-                levelMargin = "50,0,0,0"
+                levelMargin = "50,0,0,0",
+                name = "cerbero"
             },
             new Mejora()
             {
@@ -41,7 +43,8 @@ namespace Feed_The_Hades
                 fontSize = 25,
                 isEnabled = true,
                 iconMargin = "0,0,50,0",
-                levelMargin = "90,0,0,0"
+                levelMargin = "90,0,0,0",
+                name = "tanatos"
             },
             new Mejora()
             {
@@ -51,7 +54,8 @@ namespace Feed_The_Hades
                 fontSize = 25,
                 isEnabled = true,
                 iconMargin = "0,0,50,0",
-                levelMargin = "50,0,0,0"
+                levelMargin = "50,0,0,0",
+                name = "caronte"
             },
             new Mejora()
             {
@@ -61,7 +65,8 @@ namespace Feed_The_Hades
                 fontSize = 25,
                 isEnabled = false,
                 iconMargin = "0,0,45,0",
-                levelMargin = "80,0,0,0"
+                levelMargin = "80,0,0,0",
+                name = "bancos"
             }
         };
 
