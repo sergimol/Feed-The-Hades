@@ -24,12 +24,20 @@ namespace Feed_The_Hades
     /// </summary>
     public sealed partial class PagPrincipal : Page
     {
+
+        //Timer para el update del juego
+        DispatcherTimer UpdateTimer;
+
         int SOULS;
+        int soulsPerSecond = 100;
+        int soulsPerClick = 10;
         public PagPrincipal()
         {
             this.InitializeComponent();
         }
         public ObservableCollection<VMCatastrofe> ListaCatastrofes { get; } = new ObservableCollection<VMCatastrofe>();
+
+
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -63,23 +71,25 @@ namespace Feed_The_Hades
                 SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
 
             base.OnNavigatedTo(e);
+
+            UpdateTimerSetup();
         }
 
-        #region goBack 
-        private void Back_Click(object sender, RoutedEventArgs e)
-        {
-            On_BackRequested();
-        }
-        private bool On_BackRequested()
-        {
-            if (this.Frame.CanGoBack)
-            {
-                this.Frame.GoBack();
-                return true;
-            }
-            return false;
-        }
-        #endregion
+        //#region goBack 
+        //private void Back_Click(object sender, RoutedEventArgs e)
+        //{
+        //    On_BackRequested();
+        //}
+        //private bool On_BackRequested()
+        //{
+        //    if (this.Frame.CanGoBack)
+        //    {
+        //        this.Frame.GoBack();
+        //        return true;
+        //    }
+        //    return false;
+        //}
+        //#endregion
         #region Buttons
         //Click config
         //private void configButton_Click(object sender, RoutedEventArgs e)
@@ -89,14 +99,14 @@ namespace Feed_The_Hades
         //Click exit
         private void exitButton_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Exit();
+            exitPopUp.IsOpen = true;
         }
         private void soul_Click(object sender, RoutedEventArgs e)
         {
-            SOULS++;
-            soulText.Text = SOULS.ToString() + 1000 + " ALMAS";
+            SOULS+=soulsPerClick;
+            soulText.Text = SOULS.ToString() + " ALMAS";
 
-            //popUP.IsOpen = true;
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -104,5 +114,46 @@ namespace Feed_The_Hades
 
         }
         #endregion
+
+        private void shop_Click(object sender, RoutedEventArgs e)
+        {
+            shopPopUp.IsOpen = true;
+        }
+
+        private void confirmExit_Click(object sender, RoutedEventArgs e)
+        {
+            //carga la pagina 2 y ademas pasa el dato del nombre
+            this.Frame.Navigate(typeof(Javi));
+            //Application.Current.Exit();
+        }
+
+        private void noExit_Click(object sender, RoutedEventArgs e)
+        {
+            exitPopUp.IsOpen = false;
+        }
+
+        //Timer para la actualizacion del juego
+        public void UpdateTimerSetup()
+        {
+            //Configurar la actualizacion del timer para 1cs de segundo
+            UpdateTimer = new DispatcherTimer();
+            UpdateTimer.Tick += UpdateTimer_Tick; //Funcion de callback cada vez que se completa el timer
+            UpdateTimer.Interval = new TimeSpan(10000000); // por segundo
+            UpdateTimer.Start();
+        }
+
+        //Callback cada vez que se tiene que actualizar el juego
+        private void UpdateTimer_Tick(object sender, object e)
+        {
+            UpdateSouls();
+
+        }
+
+        //Updatea las almas 
+        private void UpdateSouls()
+        {
+            SOULS += soulsPerSecond;
+            soulText.Text = SOULS.ToString() +  " ALMAS";
+        }
     }
 }

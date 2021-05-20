@@ -173,13 +173,13 @@
                                Fill="#6a466c" Shadow="{StaticResource SharedShadow}" />
 
                     <TextBlock Text="MEJORAS" FontSize="25" Foreground="#FFFFBFF5" Margin="369,110,40,59"/>
-                    
+
                     <Rectangle x:Name="auxRectShop"  HorizontalAlignment="Center" Width="150" Height="150" Margin="0,50,0,0" Grid.Row="1" Stroke="#ac70ac"
                                StrokeThickness="5" VerticalAlignment="Top" 
                                Fill="#f997fe" Shadow="{StaticResource SharedShadow}" Style="{StaticResource diamondRect}" />
                     <Button x:Name="shop" Height="150" Width="150" 
                     Shadow="{StaticResource SharedShadow}" BorderBrush="#FFF79AE6" BorderThickness="5" 
-                    Margin="0,50,0,0" Background="#FFA66BAD" Click="soul_Click" 
+                    Margin="0,50,0,0" Background="#FFA66BAD" Click="shop_Click" 
                     VerticalAlignment="Top" HorizontalAlignment="Center">
 
                         <Button.Resources>
@@ -201,11 +201,14 @@
                         </Button.Resources>
 
 
-                     <Image Source="Assets/upgradeIcon.png" Width="100" Height="100" ></Image>
+                        <Image Source="Assets/upgradeIcon.png" Width="100" Height="100" ></Image>
+
+
 
 
                     </Button>
                 </Grid>
+
 
                 <!--LISTA DE MEJORAS-->
                 <ListView  SelectionMode="None" VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -244,7 +247,7 @@
                 </ListView>
 
             </StackPanel>
-            
+
 
             <!--DIOSES GRIEGOS-->
             <ScrollViewer Grid.Row="2" Grid.ColumnSpan="2">
@@ -262,15 +265,20 @@
                 </GridView>
             </ScrollViewer>
             <!--BARRA DE MUERTES-->
-            <StackPanel Grid.Row="3" Grid.ColumnSpan="3" Background="Red" Orientation="Vertical" Padding="0,20,0,0">
+            <ProgressBar Grid.Row="3" Grid.ColumnSpan="3" Height="100" Value="10" Background="#FFF19999" Foreground="Red">
+                
+            </ProgressBar>
+            <StackPanel Grid.Row="3" Grid.ColumnSpan="3"  Orientation="Vertical" Padding="0,20,0,0">
                 <TextBlock Text="MUERTES TOTALES" FontSize="20" HorizontalAlignment="Center" />
-                <TextBlock Text="3949/7000000" FontSize="20" HorizontalAlignment="Center" />
+                <TextBlock Text="/7000000" FontSize="40" HorizontalAlignment="Center" />
             </StackPanel>
+            
+            
             <!--AJUSTES DE CONFIG Y EXIT-->
             <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Vertical">
 
-                <AppBarButton Icon="Setting" HorizontalAlignment="Right" VerticalAlignment="Bottom"  BorderBrush="#FF740B0B" BorderThickness="5" Height="50" Background="#FF746666"/>
-                <AppBarButton Icon="Cancel" Click="exitButton_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"  BorderBrush="#FF740B0B" BorderThickness="5" Height="50" Background="#FF871919"/>
+                <AppBarButton Icon="Setting" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Bottom"  BorderBrush="#FF363636" BorderThickness="5" Height="50" Background="#FF746666"/>
+                <AppBarButton Icon="Cancel" Foreground="White" Click="exitButton_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom"  BorderBrush="#FF740B0B" BorderThickness="5" Height="50" Background="#FF871919"/>
 
             </StackPanel>
 
@@ -317,12 +325,51 @@
                 </Grid>
             </Popup>-->
 
-            <Popup x:Name="shopPopUp" IsOpen="False" Width="200" Height="200">
-                <Grid Background="#FFE5E5E5" Height="100" Width="100"/>
+            <!--POP UP DEL MENU DE MEJORAS DE POTENCIADORES-->
+            <Popup x:Name="shopPopUp" Grid.Column="1" Grid.Row="1" IsOpen="False" IsLightDismissEnabled="True">
+                <Grid Margin="-200,100,0,0" Width="500" Height="300" >
+
+                    <Rectangle Width="500" Height="300" Opacity="0.7" Fill="#8c649d" Stroke="#FFFFBFF5" StrokeThickness="5"/>
+
+                    <Button x:Name="nada" Click="Button_Click" MinWidth="300" Margin="10,10,0,10" MinHeight="35"
+                    HorizontalContentAlignment="Center" VerticalAlignment="Top"
+                    Background="#b370a5" BorderBrush="#FFFFBFF5" BorderThickness="4" Opacity="0.7"
+                    Shadow="{StaticResource SharedShadow}">
+                        <StackPanel Orientation="Horizontal">
+                            <FontIcon Glyph="&#xED56;" Margin="0,0,45,0" FontSize="25" HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                              Foreground="#FFFFBFF5"/>
+                            <TextBlock Text="Comida de Cerbero" FontSize="25" Foreground="#FFFFBFF5"/>
+                            <TextBlock Text="12" Margin="50,0,0,0" FontSize="25" Foreground="#FFFFBFF5"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
             </Popup>
 
-        </Grid>
+            <!--POP UP DEL MENU DE SALIR-->
+            <Popup x:Name="exitPopUp" Grid.Column="3" Grid.Row="2" IsOpen="False" IsLightDismissEnabled="True">
+                <Grid Margin="220,150,0,0" Width="500" Height="200" >
+
+                    <Rectangle Width="200" Height="300" Opacity="0.7" Fill="#FF5B1010" Stroke="#FFEE5B5B" StrokeThickness="5"/>
+
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="¿ESTÁS SEGURO?" FontSize="20" Foreground="White" 
+                                   VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20"></TextBlock>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Button x:Name="confirmExit" Content="SI" Click="confirmExit_Click" Width="50" Height="50"
+                                    Foreground="White"></Button>
+                            <Button x:Name="noExit" Content="NO" Click="noExit_Click" Width="50" Height="50"
+                                    Foreground="White"></Button>
+                        </StackPanel>
+                        
+                    </StackPanel>
+
+                    
+                </Grid>
+            </Popup>
 
 
+
+
+        </Grid> 
     </Viewbox>
 </Page>
