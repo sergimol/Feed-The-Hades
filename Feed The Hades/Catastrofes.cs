@@ -42,8 +42,8 @@ namespace Feed_The_Hades
             Precio = 10000,
             PrecioText = "10 000 Almas",
             Kills = 1000,
-            borderbrush = new SolidColorBrush(Color.FromArgb(255, 220, 140, 243)),
-            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 220, 140, 243))
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255, 0, 0)),
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160, 0, 0))
     },
         new Catastrofe()
         {
@@ -53,8 +53,8 @@ namespace Feed_The_Hades
             Precio = 25000,
             PrecioText = "25 000 Almas",
             Kills = 10000,
-            borderbrush = new SolidColorBrush(Color.FromArgb(255, 220, 140, 243)),
-            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 220, 140, 243))
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 0, 255, 0)),
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 0, 160, 0))
             },
             new Catastrofe()
         {
@@ -64,8 +64,8 @@ namespace Feed_The_Hades
             Precio = 1000000,
             PrecioText = "1M Almas",
             Kills = 500000,
-            borderbrush = new SolidColorBrush(Color.FromArgb(255, 220, 140, 243)),
-            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 220, 140, 243))
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255,165,0)),
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160,70,0))
             }
 
         };
