@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI;
+using Windows.UI.Xaml.Media;
 
 namespace Feed_The_Hades
 {
@@ -18,6 +20,8 @@ namespace Feed_The_Hades
         public string Nombre { get; set; }
         public string PrecioText { get; set; }
         public string Imagen { get; set; }
+        public Brush borderbrush { get; set; }
+        public Brush backgroundBrush { get; set; }
         //public Image Img;
 
         public Catastrofe() { }
@@ -38,7 +42,9 @@ namespace Feed_The_Hades
             Precio = 10000,
             PrecioText = "10 000 Almas",
             Kills = 1000,
-            },
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 220, 140, 243)),
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 220, 140, 243))
+    },
         new Catastrofe()
         {
             Id = 1,
@@ -47,6 +53,8 @@ namespace Feed_The_Hades
             Precio = 25000,
             PrecioText = "25 000 Almas",
             Kills = 10000,
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 220, 140, 243)),
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 220, 140, 243))
             },
             new Catastrofe()
         {
@@ -56,6 +64,8 @@ namespace Feed_The_Hades
             Precio = 1000000,
             PrecioText = "1M Almas",
             Kills = 500000,
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 220, 140, 243)),
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 220, 140, 243))
             }
 
         };

@@ -20,6 +20,10 @@ namespace Feed_The_Hades
             Precio = dron.Precio;
             PrecioText = dron.PrecioText;
             Kills = dron.Kills;
+            borderbrush = dron.borderbrush; 
+            backgroundBrush = dron.backgroundBrush;
+
+
             Img = new Image();
             string s = System.IO.Directory.GetCurrentDirectory() + "\\" + dron.Imagen;
             Img.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(s));
