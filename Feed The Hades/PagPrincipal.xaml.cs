@@ -31,9 +31,9 @@ namespace Feed_The_Hades
         DispatcherTimer UpdateTimer;
 
         //PARA ALMAS
-        int SOULS;
-        int soulsPerSecond = 100;
-        int soulsPerClick = 10;
+        long SOULS;
+        long soulsPerSecond = 100;
+        long soulsPerClick = 10;
 
         int index = -1;
         int indexDios = -1;
@@ -60,7 +60,7 @@ namespace Feed_The_Hades
 
         //PARA MUERTES
         long DEATHS = 0;
-        int incomingKills = 0;
+        long incomingKills = 0;
         public PagPrincipal()
         {
             this.InitializeComponent();

@@ -14,9 +14,9 @@ namespace Feed_The_Hades
 
         public int Id { get; set; }
 
-        public int Precio { get; set; }
+        public long Precio { get; set; }
 
-        public int Kills { get; set; }
+        public long Kills { get; set; }
         public string Nombre { get; set; }
         public string PrecioText { get; set; }
         public string Imagen { get; set; }
@@ -41,9 +41,9 @@ namespace Feed_The_Hades
             Imagen = "Assets\\TIRRA.png",
             Precio = 10000,
             PrecioText = "10 000 Almas",
-            Kills = 1000,
-            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255, 0, 0)),
-            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160, 0, 0))
+            Kills = 10000000,
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255,165,0)), //naranja
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160,70,0))
     },
         new Catastrofe()
         {
@@ -52,9 +52,20 @@ namespace Feed_The_Hades
             Imagen = "Assets\\TIRRA.png",
             Precio = 25000,
             PrecioText = "25 000 Almas",
-            Kills = 10000,
-            borderbrush = new SolidColorBrush(Color.FromArgb(255, 0, 255, 0)),
-            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 0, 160, 0))
+            Kills = 1000000,
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255,165,0)), //naranja
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160,70,0))
+            },
+        new Catastrofe()
+        {
+            Id = 2,
+            Nombre = "Invocar Gigante",
+            Imagen = "Assets\\TIRRA.png",
+            Precio = 50000,
+            PrecioText = "50 000 Almas",
+            Kills = 2000000,
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 0)), //Amarillo
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160, 160, 0))
             },
             new Catastrofe()
         {
@@ -63,10 +74,89 @@ namespace Feed_The_Hades
             Imagen = "Assets\\TIRRA.png",
             Precio = 1000000,
             PrecioText = "1M Almas",
-            Kills = 500000,
-            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255,165,0)),
+            Kills = 50000000,
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255,0,0)), //ROJO
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160,0,0))
+            },new Catastrofe()
+        {
+            Id = 3,
+            Nombre = "Erupcion Volcanica",
+            Imagen = "Assets\\TIRRA.png",
+            Precio = 2000000,
+            PrecioText = "2M Almas",
+            Kills = 12000000,
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255,165,0)), //naranja
             backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160,70,0))
-            }
+            },
+            new Catastrofe()
+        {
+            Id = 2,
+            Nombre = "Invocar Hecatonquiro",
+            Imagen = "Assets\\TIRRA.png",
+            Precio = 5000000,
+            PrecioText = "5M Almas",
+            Kills = 100000000,
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 0)), //Amarillo
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160, 160, 0))
+            },
+
+            new Catastrofe()
+        {
+            Id = 4,
+            Nombre = "Guerra Fria",
+            Imagen = "Assets\\TIRRA.png",
+            Precio = 10000000,
+            PrecioText = "10M Almas",
+            Kills = 500000000,
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255,0,0)), //ROJO
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160,0,0))
+            },new Catastrofe()
+
+        {
+            Id = 5,
+            Nombre = "Cabeza Nuclear",
+            Imagen = "Assets\\TIRRA.png",
+            Precio = 100000000,
+            PrecioText = "100M Almas",
+            Kills = 50000000000,
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255,0,0)), //ROJO
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160,0,0))
+            },
+            new Catastrofe()
+
+        {
+            Id = 5,
+            Nombre = "Fragmento Lunar",
+            Imagen = "Assets\\TIRRA.png",
+            Precio = 100000000,
+            PrecioText = "1000M Almas",
+            Kills = 100000000000,
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255,165,0)), //naranja
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160,70,0))
+            },
+            new Catastrofe()
+
+        {
+            Id = 6,
+            Nombre = "Bomba de Hidrogeno",
+            Imagen = "Assets\\TIRRA.png",
+            Precio = 10000000000,
+            PrecioText = "10000M Almas",
+            Kills = 100000000000,
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255,0,0)), //ROJO
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160,0,0))
+            },new Catastrofe()
+
+        {
+            Id = 2,
+             Nombre = "Brecha hacia el Hades",
+            Imagen = "Assets\\TIRRA.png",
+            Precio = 70000000000,
+            PrecioText = "70000M Almas",
+            Kills = 700000000000,
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 0)), //Amarillo
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160, 160, 0))
+            },
 
         };
         public static IList<Catastrofe> GetAllCatastrofes()
