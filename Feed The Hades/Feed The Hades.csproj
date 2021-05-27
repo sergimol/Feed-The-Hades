@@ -148,13 +148,11 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\alexcalvo.png" />
     <Content Include="Assets\apolo.png" />
     <Content Include="Assets\ares.png" />
     <Content Include="Assets\atenea.png" />
     <Content Include="Assets\hadesBackground.jpg" />
     <Content Include="Assets\hadesIcon.png" />
-    <Content Include="Assets\leomesi.png" />
     <Content Include="Assets\mapamundi.jpg" />
     <Content Include="Assets\panacea.jpg" />
     <Content Include="Assets\panacea.png" />
@@ -165,7 +163,6 @@
     <Content Include="Assets\soulbutton.png" />
     <Content Include="Assets\MAPON.jpg" />
     <Content Include="Assets\TIRRA.png" />
-    <Content Include="Assets\eltio.png" />
     <Content Include="Assets\upgradeIcon.png" />
     <Content Include="Assets\zeus.png" />
     <Content Include="Properties\Default.rd.xml" />
