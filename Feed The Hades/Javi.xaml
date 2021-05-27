@@ -52,9 +52,9 @@
                 Click="playButton_Click"
                 ToolTipService.ToolTip="Click para crear nueva partida"
                 IsTabStop="True"
-                BorderThickness="5"
+                BorderThickness="10"
                     
-                UseSystemFocusVisuals="True" Background="#FFEFACFF" BorderBrush="#FF8E40A4">
+                UseSystemFocusVisuals="True" Background="#FF6A466C" BorderBrush="#FFAC70AC" Foreground="#FFFFBFF5">
 
                     <Button.KeyboardAccelerators>
                         <KeyboardAccelerator Modifiers="Control" Key="J"/>
@@ -70,8 +70,8 @@
                 Click="playButton_Click"
                 ToolTipService.ToolTip="Click para crear nueva partida"          
                 IsTabStop="True"
-                UseSystemFocusVisuals="True" Background="#FFEFACFF" BorderBrush="#FF8E40A4"
-                BorderThickness="5">
+                UseSystemFocusVisuals="True" Background="#FF6A466C" BorderBrush="#FFAC70AC"
+                BorderThickness="10" Foreground="#FFFFBFF5">
                 </Button>
                 <!--Boton 3-->
                 <Button x:Name="configButton2"
@@ -83,8 +83,8 @@
                 Click="playButton_Click"    
                 ToolTipService.ToolTip="Click para crear nueva partida"          
                 IsTabStop="True"
-                UseSystemFocusVisuals="True" Background="#FFEFACFF" BorderBrush="#FF8E40A4"
-                 BorderThickness="5">
+                UseSystemFocusVisuals="True" Background="#FF6A466C" BorderBrush="#FFAC70AC"
+                 BorderThickness="10" Foreground="#FFFFBFF5">
                 </Button>
                 <StackPanel
             VerticalAlignment="Bottom"
