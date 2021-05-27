@@ -228,6 +228,92 @@ namespace Feed_The_Hades
                 Imagen = "/Assets/panacea.png",
             borderbrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 0)), //AMARILLO
             backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160, 160, 0))
+            },
+            new Dios()
+            {
+                Id = 6,
+                Nombre = "Zeus",
+                Imagen = "/Assets/zeus.png",
+                borderbrush = new SolidColorBrush(Color.FromArgb(255, 255,165,0)), //NARANJA
+                backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160,70,0))
+            },new Dios()
+            {
+                Id = 7,
+                Nombre = "Ares",
+                Imagen = "/Assets/ares.png",
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255,0,0)), //ROJO
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160,0,0))
+            },new Dios()
+            {
+                Id = 8,
+                Nombre = "Poseidon",
+                Imagen = "/Assets/poseidon.png",
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255,165,0)), //NARANJA
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160,70,0))
+            },new Dios()
+            {
+                Id = 9,
+                Nombre = "Atenea",
+                Imagen = "/Assets/atenea.png",
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 0)), //AMARILLO
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160, 160, 0))
+            },new Dios()
+            {
+                Id = 10,
+                Nombre = "Apolo",
+                Imagen = "/Assets/apolo.png",
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255,0,0)), //ROJO
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160,0,0))
+            },new Dios()
+            {
+                Id = 11,
+                Nombre = "panacea",
+                Imagen = "/Assets/panacea.png",
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 0)), //AMARILLO
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160, 160, 0))
+            },
+            new Dios()
+            {
+                Id = 12,
+                Nombre = "Zeus",
+                Imagen = "/Assets/zeus.png",
+                borderbrush = new SolidColorBrush(Color.FromArgb(255, 255,165,0)), //NARANJA
+                backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160,70,0))
+            },new Dios()
+            {
+                Id = 13,
+                Nombre = "Ares",
+                Imagen = "/Assets/ares.png",
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255,0,0)), //ROJO
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160,0,0))
+            },new Dios()
+            {
+                Id = 14,
+                Nombre = "Poseidon",
+                Imagen = "/Assets/poseidon.png",
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255,165,0)), //NARANJA
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160,70,0))
+            },new Dios()
+            {
+                Id = 15,
+                Nombre = "Atenea",
+                Imagen = "/Assets/atenea.png",
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 0)), //AMARILLO
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160, 160, 0))
+            },new Dios()
+            {
+                Id = 16,
+                Nombre = "Apolo",
+                Imagen = "/Assets/apolo.png",
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255,0,0)), //ROJO
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160,0,0))
+            },new Dios()
+            {
+                Id = 17,
+                Nombre = "panacea",
+                Imagen = "/Assets/panacea.png",
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 0)), //AMARILLO
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160, 160, 0))
             }
         };
 
