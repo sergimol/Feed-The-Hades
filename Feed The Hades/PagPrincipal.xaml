@@ -291,7 +291,7 @@
                                 BorderThickness="2"
                                 >
                                 
-                                <Image Source="{Binding Imagen}" Width="100" Height="150" Margin="20, 20,20,20"/>
+                                <Image Source="{Binding Imagen}" Width="100" Height="100" Margin="20, 20,20,20"/>
                             </StackPanel>
                         </DataTemplate>
                     </GridView.ItemTemplate>
