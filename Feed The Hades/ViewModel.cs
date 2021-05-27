@@ -47,6 +47,8 @@ namespace Feed_The_Hades
             Id = d.Id;
             Nombre = d.Nombre;
             Imagen = d.Imagen;
+            borderbrush = d.borderbrush;
+            backgroundBrush = d.backgroundBrush;
         }
     }
 

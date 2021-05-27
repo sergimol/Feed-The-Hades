@@ -175,7 +175,14 @@
                               >
                         <GridView.ItemTemplate>
                             <DataTemplate>
-                                <Image Source="{Binding Imagen}" Width="100" Height="150" Margin="20, 20,20,20"/>
+                                <StackPanel
+                                    BorderBrush="{Binding borderbrush}"
+                                    Background="{Binding backgroundBrush}"
+                                    BorderThickness="2"
+                                    >
+                                    <Image Source="{Binding Imagen}" Width="100" Height="150" Margin="20, 20,20,20"/>
+                                    
+                                </StackPanel>
                             </DataTemplate>
                         </GridView.ItemTemplate>
 
@@ -278,7 +285,14 @@
                           >
                     <GridView.ItemTemplate>
                         <DataTemplate>
-                            <Image Source="{Binding Imagen}" Width="100" Height="150" Margin="20, 20,20,20"/>
+                            <StackPanel
+                                BorderBrush="{Binding borderbrush}"
+                                Background="{Binding backgroundBrush}"
+                                BorderThickness="2"
+                                >
+                                
+                                <Image Source="{Binding Imagen}" Width="100" Height="150" Margin="20, 20,20,20"/>
+                            </StackPanel>
                         </DataTemplate>
                     </GridView.ItemTemplate>
 

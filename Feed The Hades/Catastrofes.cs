@@ -177,6 +177,8 @@ namespace Feed_The_Hades
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Imagen { get; set; }
+        public Brush borderbrush { get; set; }
+        public Brush backgroundBrush { get; set; }
 
     }
 
@@ -189,21 +191,29 @@ namespace Feed_The_Hades
                 Id = 0,
                 Nombre = "Apollo",
                 Imagen = "/Assets/eltio.png",
+                borderbrush = new SolidColorBrush(Color.FromArgb(255, 255,165,0)), //naranja
+                backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160,70,0))
             },new Dios()
             {
                 Id = 1,
                 Nombre = "Apollo",
                 Imagen = "/Assets/alexcalvo.png",
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255, 255, 0)), //Amarillo
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160, 160, 0))
             },new Dios()
             {
                 Id = 2,
                 Nombre = "Apollo",
                 Imagen = "/Assets/eltio.png",
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255,0,0)), //ROJO
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160,0,0))
             },new Dios()
             {
                 Id = 3,
                 Nombre = "Apollo",
                 Imagen = "/Assets/eltio.png",
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 255,165,0)), //naranja
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(255, 160,70,0))
             }
         };
 
@@ -215,16 +225,22 @@ namespace Feed_The_Hades
                 Id = -1,
                 Nombre = "Apollo",
                 Imagen = "/Assets/leomesi.png",
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 239, 172, 255)), //naranja
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(155, 166,107,173))
             },new Dios()
             {
                 Id = -1,
                 Nombre = "Apollo",
                 Imagen = "/Assets/leomesi.png",
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 239, 172, 255)), //naranja
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(155, 166,107,173))
             },new Dios()
             {
                 Id = -1,
                 Nombre = "Apollo",
                 Imagen = "/Assets/leomesi.png",
+            borderbrush = new SolidColorBrush(Color.FromArgb(255, 239, 172, 255)), //naranja
+            backgroundBrush = new SolidColorBrush(Color.FromArgb(155, 166,107,173))
             }
         };
 
@@ -254,6 +270,8 @@ namespace Feed_The_Hades
                 Id = -1,
                 Nombre = "Apollo",
                 Imagen = "/Assets/leomesi.png",
+                borderbrush = new SolidColorBrush(Color.FromArgb(255, 239, 172, 255)), //naranja
+                backgroundBrush = new SolidColorBrush(Color.FromArgb(155, 166, 107, 173))
             };
         }
 
